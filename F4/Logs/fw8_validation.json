@@ -1,0 +1,605 @@
+{
+  "firmware": "FW8 FireWater18 AHRS9",
+  "tests": 66,
+  "steady_A": {
+    "driver": {
+      "drdy": 190434,
+      "samples": 190434,
+      "busy_drops": 0,
+      "queue_drops": 0,
+      "invalid_samples": 0,
+      "spi_errors": 0,
+      "timeouts": 0,
+      "timestamp": 190808707,
+      "max_dma_us": 191,
+      "state": 6,
+      "error": 0,
+      "id": 104
+    },
+    "uart": {
+      "started": 19020,
+      "completed": 19020,
+      "dropped": 50,
+      "errors": 0,
+      "timeouts": 0,
+      "start_errors": 0,
+      "aborts": 0,
+      "abort_timeouts": 0,
+      "hal_error": 0,
+      "status_frames": 1,
+      "busy": 0,
+      "faulted": 0,
+      "attitude_frames": 18820,
+      "attitude_status_frames": 2
+    },
+    "attitude": {
+      "timestamp": 190806710,
+      "sequence": 190432,
+      "state": 2,
+      "error": 0,
+      "flags": 125,
+      "q": [
+        0.9919427037239075,
+        0.0005245982320047915,
+        0.0028843465261161327,
+        0.12665307521820068
+      ],
+      "euler_deg": [
+        0.10149340274510943,
+        0.32024662604713827,
+        14.55280573433749
+      ],
+      "bias_rad_s": [
+        0.01649622805416584,
+        0.04858832061290741,
+        -0.02360382489860058
+      ],
+      "inputs": 190435,
+      "predictions": 188435,
+      "corrections": 37639,
+      "publications": 37640,
+      "calibration_samples": 2000,
+      "calibration_restarts": 0,
+      "accel_rejections": 0,
+      "timing_faults": 0,
+      "gap_faults": 0,
+      "max_update_us": 18,
+      "heading_state": 2,
+      "mag_samples": 18228,
+      "mag_corrections": 18209,
+      "mag_rejections": 0,
+      "mag_stale_events": 0,
+      "mag_timestamp": 190797065,
+      "mag_sequence": 18422,
+      "magnetic_body_uT": [
+        36.32929992675781,
+        -9.445395469665527,
+        34.29341125488281
+      ],
+      "magnetic_norm_uT": 50.843597412109375,
+      "magnetic_innovation_rad": 0.00065112195443362,
+      "magnetic_bias_rad_s": [
+        -3.227322622478823e-07,
+        6.922408601894858e-08,
+        5.976223110337742e-05
+      ]
+    },
+    "mag": {
+      "state": 2,
+      "error": 0,
+      "id": 73,
+      "bad_register": 0,
+      "expected": 0,
+      "actual": 0,
+      "samples": 18423,
+      "not_ready": 29125,
+      "overruns": 1,
+      "bus_errors": 0,
+      "invalid_samples": 0,
+      "timestamp": 190809070,
+      "max_interval_us": 20587,
+      "calibration_valid": 1,
+      "raw": [
+        -169,
+        -5569,
+        5976
+      ],
+      "field_uT": [
+        36.29042434692383,
+        -9.630064964294434,
+        34.50981903076172
+      ],
+      "norm_uT": 50.996673583984375,
+      "sample_valid": 1,
+      "calibration_error": 0
+    },
+    "bus": {
+      "transactions": 47755,
+      "busy_skips": 579523,
+      "errors": 0,
+      "deferred_drdy": 0,
+      "lost_drdy": 0,
+      "max_transfer_us": 121
+    }
+  },
+  "steady_B": {
+    "driver": {
+      "drdy": 237878,
+      "samples": 237878,
+      "busy_drops": 0,
+      "queue_drops": 0,
+      "invalid_samples": 0,
+      "spi_errors": 0,
+      "timeouts": 0,
+      "timestamp": 238192984,
+      "max_dma_us": 191,
+      "state": 6,
+      "error": 0,
+      "id": 104
+    },
+    "uart": {
+      "started": 23759,
+      "completed": 23758,
+      "dropped": 50,
+      "errors": 0,
+      "timeouts": 0,
+      "start_errors": 0,
+      "aborts": 0,
+      "abort_timeouts": 0,
+      "hal_error": 0,
+      "status_frames": 1,
+      "busy": 1,
+      "faulted": 0,
+      "attitude_frames": 23559,
+      "attitude_status_frames": 2
+    },
+    "attitude": {
+      "timestamp": 238191986,
+      "sequence": 237877,
+      "state": 2,
+      "error": 0,
+      "flags": 125,
+      "q": [
+        0.9919114708900452,
+        0.00043570794514380395,
+        0.0028824263717979193,
+        0.12689846754074097
+      ],
+      "euler_deg": [
+        0.0914408583907316,
+        0.32129591385838147,
+        14.581125406183656
+      ],
+      "bias_rad_s": [
+        0.016496138647198677,
+        0.048588331788778305,
+        -0.023590033873915672
+      ],
+      "inputs": 237879,
+      "predictions": 235879,
+      "corrections": 47116,
+      "publications": 47117,
+      "calibration_samples": 2000,
+      "calibration_restarts": 0,
+      "accel_rejections": 0,
+      "timing_faults": 0,
+      "gap_faults": 0,
+      "max_update_us": 18,
+      "heading_state": 2,
+      "mag_samples": 22810,
+      "mag_corrections": 22791,
+      "mag_rejections": 0,
+      "mag_stale_events": 0,
+      "mag_timestamp": 238181240,
+      "mag_sequence": 23004,
+      "magnetic_body_uT": [
+        36.33927917480469,
+        -9.479536056518555,
+        34.497108459472656
+      ],
+      "magnetic_norm_uT": 50.994659423828125,
+      "magnetic_innovation_rad": 0.0008057821542024612,
+      "magnetic_bias_rad_s": [
+        -4.1073468537433655e-07,
+        8.352824210078325e-08,
+        7.355425623245537e-05
+      ]
+    },
+    "mag": {
+      "state": 2,
+      "error": 0,
+      "id": 73,
+      "bad_register": 0,
+      "expected": 0,
+      "actual": 0,
+      "samples": 23005,
+      "not_ready": 36389,
+      "overruns": 1,
+      "bus_errors": 0,
+      "invalid_samples": 0,
+      "timestamp": 238193220,
+      "max_interval_us": 20587,
+      "calibration_valid": 1,
+      "raw": [
+        -174,
+        -5540,
+        5977
+      ],
+      "field_uT": [
+        36.24646759033203,
+        -9.398277282714844,
+        34.525760650634766
+      ],
+      "norm_uT": 50.932918548583984,
+      "sample_valid": 1,
+      "calibration_error": 0
+    },
+    "bus": {
+      "transactions": 59648,
+      "busy_skips": 724624,
+      "errors": 0,
+      "deferred_drdy": 0,
+      "lost_drdy": 0,
+      "max_transfer_us": 121
+    }
+  },
+  "measured_rates_hz": {
+    "predictions": 1001.2392879172003,
+    "corrections": 199.99883508117586,
+    "publications": 199.99883508117586,
+    "mag_samples": 96.69670384530419,
+    "mag_corrections": 96.69670384530419
+  },
+  "uart_records": 5999,
+  "uart_hz": 99.97449225573486,
+  "capture_seconds": 60.005306,
+  "angles_deg": {
+    "roll": {
+      "min": 0.082,
+      "max": 0.125,
+      "mean": 0.10335839306551092,
+      "stdev": 0.007764016731745692,
+      "first": 0.096,
+      "last": 0.102,
+      "end_change": 0.0059999999999999915
+    },
+    "pitch": {
+      "min": 0.299,
+      "max": 0.354,
+      "mean": 0.32560810135022505,
+      "stdev": 0.008158555921128624,
+      "first": 0.314,
+      "last": 0.322,
+      "end_change": 0.008000000000000007
+    },
+    "yaw": {
+      "min": 14.457,
+      "max": 14.649,
+      "mean": 14.52368461410235,
+      "stdev": 0.03459970238139466,
+      "first": 14.53,
+      "last": 14.644,
+      "end_change": 0.11400000000000077
+    }
+  },
+  "capture_boundary_fragments": [],
+  "magnetic_calibration": {
+    "records": 9999,
+    "bias_uT": [
+      -35.679369036192085,
+      -34.2154392097857,
+      16.7327198900164
+    ],
+    "matrix": [
+      [
+        1.0484164364953725,
+        -0.008971661622075485,
+        0.0067033635376933035
+      ],
+      [
+        -0.008971661622075513,
+        0.9964568954308848,
+        0.031467098577585284
+      ],
+      [
+        0.006703363537693305,
+        0.031467098577585256,
+        1.1135851035416229
+      ]
+    ],
+    "reference_uT": 50.0,
+    "holdout_records": 2000,
+    "holdout_rms_relative": 0.004787322971069489,
+    "holdout_p95_relative": 0.009992228798313995,
+    "all_rms_relative": 0.004764803487467136,
+    "design_condition": 13.93470822719717,
+    "octants": {
+      "0": 445,
+      "1": 1813,
+      "3": 138,
+      "4": 418,
+      "5": 6163,
+      "7": 1022
+    },
+    "direction_min": [
+      -0.9823227829237626,
+      -0.8141979646771514,
+      -0.8053771182157685
+    ],
+    "direction_max": [
+      0.9951831802728919,
+      0.709407327772258,
+      0.9732557757664899
+    ],
+    "note": "50uT is a chosen normalization radius; heading accuracy still needs motion/environment checks",
+    "source_sha256": "1380b32368341cbed6848520b701756213633a45c274f2904129cdeeec2b2c22"
+  },
+  "magnetic_driver_software_fault": {
+    "driver": {
+      "drdy": 253645,
+      "samples": 253645,
+      "busy_drops": 0,
+      "queue_drops": 0,
+      "invalid_samples": 0,
+      "spi_errors": 0,
+      "timeouts": 0,
+      "timestamp": 253940120,
+      "max_dma_us": 191,
+      "state": 6,
+      "error": 0,
+      "id": 104
+    },
+    "uart": {
+      "started": 25333,
+      "completed": 25333,
+      "dropped": 50,
+      "errors": 0,
+      "timeouts": 0,
+      "start_errors": 0,
+      "aborts": 0,
+      "abort_timeouts": 0,
+      "hal_error": 0,
+      "status_frames": 1,
+      "busy": 0,
+      "faulted": 0,
+      "attitude_frames": 25133,
+      "attitude_status_frames": 2
+    },
+    "attitude": {
+      "timestamp": 253937124,
+      "sequence": 253642,
+      "state": 2,
+      "error": 0,
+      "flags": 47,
+      "q": [
+        0.9917879700660706,
+        0.0005464935675263405,
+        0.002880044747143984,
+        0.12785980105400085
+      ],
+      "euler_deg": [
+        0.10430837449808027,
+        0.31931323800837375,
+        14.692226970770376
+      ],
+      "bias_rad_s": [
+        0.016496209427714348,
+        0.048588309437036514,
+        -0.023603662848472595
+      ],
+      "inputs": 253646,
+      "predictions": 251646,
+      "corrections": 50265,
+      "publications": 50266,
+      "calibration_samples": 2000,
+      "calibration_restarts": 0,
+      "accel_rejections": 0,
+      "timing_faults": 0,
+      "gap_faults": 0,
+      "max_update_us": 18,
+      "heading_state": 0,
+      "mag_samples": 24027,
+      "mag_corrections": 24008,
+      "mag_rejections": 0,
+      "mag_stale_events": 1,
+      "mag_timestamp": 250725411,
+      "mag_sequence": 24221,
+      "magnetic_body_uT": [
+        36.362667083740234,
+        -9.338526725769043,
+        34.4216194152832
+      ],
+      "magnetic_norm_uT": 50.934268951416016,
+      "magnetic_innovation_rad": -0.004351559095084667,
+      "magnetic_bias_rad_s": [
+        -3.417726475163363e-07,
+        6.040394140427452e-08,
+        5.992492151563056e-05
+      ]
+    },
+    "mag": {
+      "state": 3,
+      "error": 0,
+      "id": 73,
+      "bad_register": 0,
+      "expected": 0,
+      "actual": 0,
+      "samples": 24221,
+      "not_ready": 38306,
+      "overruns": 1,
+      "bus_errors": 0,
+      "invalid_samples": 0,
+      "timestamp": 250725411,
+      "max_interval_us": 20587,
+      "calibration_valid": 1,
+      "raw": [
+        -160,
+        -5532,
+        5965
+      ],
+      "field_uT": [
+        36.362667083740234,
+        -9.338526725769043,
+        34.4216194152832
+      ],
+      "norm_uT": 50.934268951416016,
+      "sample_valid": 1,
+      "calibration_error": 0
+    },
+    "bus": {
+      "transactions": 62794,
+      "busy_skips": 762620,
+      "errors": 0,
+      "deferred_drdy": 0,
+      "lost_drdy": 0,
+      "max_transfer_us": 121
+    }
+  },
+  "mag_fault_degraded_rows": 303,
+  "warm_resets": [
+    {
+      "round": 1,
+      "valid_records": 324
+    },
+    {
+      "round": 2,
+      "valid_records": 321
+    }
+  ],
+  "final_state": {
+    "driver": {
+      "drdy": 25020,
+      "samples": 25020,
+      "busy_drops": 0,
+      "queue_drops": 0,
+      "invalid_samples": 0,
+      "spi_errors": 0,
+      "timeouts": 0,
+      "timestamp": 25602072,
+      "max_dma_us": 191,
+      "state": 6,
+      "error": 0,
+      "id": 104
+    },
+    "uart": {
+      "started": 2499,
+      "completed": 2499,
+      "dropped": 50,
+      "errors": 0,
+      "timeouts": 0,
+      "start_errors": 0,
+      "aborts": 0,
+      "abort_timeouts": 0,
+      "hal_error": 0,
+      "status_frames": 1,
+      "busy": 0,
+      "faulted": 0,
+      "attitude_frames": 2299,
+      "attitude_status_frames": 2
+    },
+    "attitude": {
+      "timestamp": 25602072,
+      "sequence": 25020,
+      "state": 2,
+      "error": 0,
+      "flags": 125,
+      "q": [
+        0.9915547370910645,
+        0.0005545784952118993,
+        0.003022646065801382,
+        0.12965327501296997
+      ],
+      "euler_deg": [
+        0.10792319875545663,
+        0.3352069814852876,
+        14.899502721512754
+      ],
+      "bias_rad_s": [
+        0.01645451784133911,
+        0.04869995638728142,
+        -0.02351098693907261
+      ],
+      "inputs": 25021,
+      "predictions": 23021,
+      "corrections": 4598,
+      "publications": 4599,
+      "calibration_samples": 2000,
+      "calibration_restarts": 0,
+      "accel_rejections": 0,
+      "timing_faults": 0,
+      "gap_faults": 0,
+      "max_update_us": 18,
+      "heading_state": 2,
+      "mag_samples": 2234,
+      "mag_corrections": 2215,
+      "mag_rejections": 0,
+      "mag_stale_events": 0,
+      "mag_timestamp": 25601314,
+      "mag_sequence": 2427,
+      "magnetic_body_uT": [
+        36.27452850341797,
+        -9.659039497375488,
+        34.6067008972168
+      ],
+      "magnetic_norm_uT": 51.056461334228516,
+      "magnetic_innovation_rad": 0.0004843669303227216,
+      "magnetic_bias_rad_s": [
+        -1.0284119333903163e-08,
+        -1.1238536323787685e-08,
+        1.4711429230374051e-06
+      ]
+    },
+    "mag": {
+      "state": 2,
+      "error": 0,
+      "id": 73,
+      "bad_register": 0,
+      "expected": 0,
+      "actual": 0,
+      "samples": 2427,
+      "not_ready": 3819,
+      "overruns": 1,
+      "bus_errors": 0,
+      "invalid_samples": 0,
+      "timestamp": 25601314,
+      "max_interval_us": 20559,
+      "calibration_valid": 1,
+      "raw": [
+        -171,
+        -5573,
+        5987
+      ],
+      "field_uT": [
+        36.27452850341797,
+        -9.659039497375488,
+        34.6067008972168
+      ],
+      "norm_uT": 51.056461334228516,
+      "sample_valid": 1,
+      "calibration_error": 0
+    },
+    "bus": {
+      "transactions": 6287,
+      "busy_skips": 77045,
+      "errors": 0,
+      "deferred_drdy": 0,
+      "lost_drdy": 0,
+      "max_transfer_us": 121
+    }
+  },
+  "flash_verified_bytes": 27980,
+  "hex_sha256": "915cd9fbd9db8b90d5a1ac8a286f49c37dd998263a80293a643f81a50cc8bb4b",
+  "compatibility_builds": {
+    "binary": {
+      "exit": 0,
+      "log": "fw8_compat_binary.log",
+      "hex": "D:\\pixhawk2.4.8\\code_keil\\MPU6000\\Logs\\fw8_compat_binary\\MPU6000_binary.hex"
+    },
+    "raw7": {
+      "exit": 0,
+      "log": "fw8_compat_raw7.log",
+      "hex": "D:\\pixhawk2.4.8\\code_keil\\MPU6000\\Logs\\fw8_compat_raw7\\MPU6000_raw7.hex"
+    }
+  },
+  "limitations": "Magnetic north, declination=0; static local validation and software fault injection, not surveyed heading accuracy, thermal calibration or flight acceptance."
+}

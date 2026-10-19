@@ -1,0 +1,23 @@
+{
+  "size": 228,
+  "symbols": {
+    "g_imu_status": {
+      "address": 536872328,
+      "size": 44
+    },
+    "g_attitude_max_update_us": {
+      "address": 536871016,
+      "size": 4
+    },
+    "g_telemetry_status": {
+      "address": 536872372,
+      "size": 52
+    },
+    "g_attitude": {
+      "address": 536872436,
+      "size": 120
+    }
+  },
+  "base": 536872328,
+  "utc": "2026-10-19T06:08:12.3832797Z"
+}

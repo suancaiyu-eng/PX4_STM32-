@@ -1,0 +1,6 @@
+#IMU state=7 error=3 id=0x68 reg=0x6B wr=40 rd=00 drdy=0 samples=0 spi=0 timeout=0
+#IMU state=7 error=3 id=0x68 reg=0x6B wr=40 rd=00 drdy=0 samples=0 spi=0 timeout=0
+#IMU state=7 error=3 id=0x68 reg=0x6B wr=40 rd=00 drdy=0 samples=0 spi=0 timeout=0
+#IMU state=7 error=3 id=0x68 reg=0x6B wr=40 rd=00 drdy=0 samples=0 spi=0 timeout=0
+#IMU state=7 error=3 id=0x68 reg=0x6B wr=40 rd=00 drdy=0 samples=0 spi=0 timeout=0
+#IMU state=7 error=3 id=0x68 reg=0x6B wr=40 rd=00 drdy=0 samples=0 spi=0 timeout=0

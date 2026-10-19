@@ -1,0 +1,21 @@
+mpu6000:22,12,-2031,-45,15,-24,-1537
+mpu6000:17,3,-2036,-46,16,-25,-1529
+mpu6000:18,4,-2051,-46,15,-22,-1545
+mpu6000:14,3,-2030,-45,16,-23,-1533
+mpu6000:10,-3,-2048,-46,16,-25,-1532
+mpu6000:7,8,-2037,-46,16,-24,-1532
+mpu6000:17,2,-2037,-45,17,-25,-1528
+mpu6000:16,14,-2044,-46,16,-23,-1542
+mpu6000:8,10,-2033,-46,16,-23,-1539
+mpu6000:8,-5,-2034,-45,17,-22,-1547
+mpu6000:18,1,-2039,-45,15,-23,-1537
+mpu6000:19,-3,-2051,-44,17,-24,-1528
+mpu6000:17,2,-2041,-46,17,-23,-1536
+mpu6000:16,-1,-2038,-45,14,-24,-1531
+#BOOT MPU6000 FW6 USART2=460800 FireWater
+#PROBE mpu=68/68/68 pwr=01 gyro=D4 accmag=49 en=1 csL=0 csH=1 sck=1 hal=00
+#IMU state=1 error=0 id=0x00 reg=0x00 wr=00 rd=00 drdy=0 samples=0 spi=0 timeout=0
+#IMU state=7 error=3 id=0x68 reg=0x75 wr=68 rd=00 drdy=0 samples=0 spi=0 timeout=0
+#IMU state=7 error=3 id=0x68 reg=0x75 wr=68 rd=00 drdy=0 samples=0 spi=0 timeout=0
+#IMU state=7 error=3 id=0x68 reg=0x75 wr=68 rd=00 drdy=0 samples=0 spi=0 timeout=0
+#IMU state=7 error=3 id=0x68 reg=0x75 wr=68 rd=00 drdy=0 samples=0 spi=0 timeout=0

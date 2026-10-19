@@ -1,0 +1,311 @@
+{
+  "records": 5999,
+  "capture_seconds": 60.0055857,
+  "output_hz": 99.97402625135946,
+  "other_lines": [],
+  "state_A": {
+    "state": 6,
+    "error": 0,
+    "id": 104,
+    "reg": 0,
+    "wr": 0,
+    "rd": 0,
+    "drdy_count": 90020,
+    "samples": 90020,
+    "busy_drops": 0,
+    "queue_drops": 0,
+    "invalid_samples": 0,
+    "spi_errors": 0,
+    "timeouts": 0,
+    "last_sample_us": 90520390,
+    "max_transfer_us": 190,
+    "telemetry": {
+      "frames_started": 8991,
+      "frames_completed": 8991,
+      "frames_dropped": 50,
+      "uart_errors": 0,
+      "tx_timeouts": 0,
+      "start_errors": 0,
+      "aborts": 0,
+      "abort_timeouts": 0,
+      "last_hal_error": 0,
+      "status_frames": 1,
+      "busy": 0,
+      "faulted": 0
+    }
+  },
+  "state_B": {
+    "state": 6,
+    "error": 0,
+    "id": 104,
+    "reg": 0,
+    "wr": 0,
+    "rd": 0,
+    "drdy_count": 98096,
+    "samples": 98095,
+    "busy_drops": 0,
+    "queue_drops": 0,
+    "invalid_samples": 0,
+    "spi_errors": 0,
+    "timeouts": 0,
+    "last_sample_us": 98586319,
+    "max_transfer_us": 190,
+    "telemetry": {
+      "frames_started": 9798,
+      "frames_completed": 9798,
+      "frames_dropped": 50,
+      "uart_errors": 0,
+      "tx_timeouts": 0,
+      "start_errors": 0,
+      "aborts": 0,
+      "abort_timeouts": 0,
+      "last_hal_error": 0,
+      "status_frames": 1,
+      "busy": 0,
+      "faulted": 0
+    }
+  },
+  "sample_rate_hz": 1001.1246069733567,
+  "uart_rate_hz": 100.050471557585,
+  "steady_frames_dropped_delta": 0,
+  "channels": {
+    "ax": {
+      "min": -1,
+      "max": 32,
+      "mean": 14.458
+    },
+    "ay": {
+      "min": -12,
+      "max": 15,
+      "mean": 1.554
+    },
+    "az": {
+      "min": -2063,
+      "max": -2015,
+      "mean": -2036.929
+    },
+    "gx": {
+      "min": -49,
+      "max": -43,
+      "mean": -45.686
+    },
+    "gy": {
+      "min": 12,
+      "max": 20,
+      "mean": 15.926
+    },
+    "gz": {
+      "min": -27,
+      "max": -20,
+      "mean": -23.61
+    },
+    "temp": {
+      "min": -1515,
+      "max": -1428,
+      "mean": -1465.269
+    }
+  },
+  "hex_sha256": "709ab4fb8344fce290257f0400ed88fe79d30075c89dbc5c3d3a59578b5f62e0",
+  "fault_injection": {
+    "state": 7,
+    "error": 7,
+    "id": 104,
+    "reg": 0,
+    "wr": 0,
+    "rd": 0,
+    "drdy_count": 225862,
+    "samples": 225862,
+    "busy_drops": 0,
+    "queue_drops": 0,
+    "invalid_samples": 0,
+    "spi_errors": 0,
+    "timeouts": 1,
+    "last_sample_us": 226193318,
+    "max_transfer_us": 191,
+    "telemetry": {
+      "frames_started": 22563,
+      "frames_completed": 22563,
+      "frames_dropped": 365,
+      "uart_errors": 0,
+      "tx_timeouts": 0,
+      "start_errors": 0,
+      "aborts": 0,
+      "abort_timeouts": 0,
+      "last_hal_error": 0,
+      "status_frames": 5,
+      "busy": 0,
+      "faulted": 0
+    }
+  },
+  "warm_resets": [
+    {
+      "round": 1,
+      "valid_records_after_boot": 343
+    },
+    {
+      "round": 2,
+      "valid_records_after_boot": 342
+    },
+    {
+      "round": 3,
+      "valid_records_after_boot": 343
+    }
+  ],
+  "final_state": {
+    "state": 6,
+    "error": 0,
+    "id": 104,
+    "reg": 0,
+    "wr": 0,
+    "rd": 0,
+    "drdy_count": 255555,
+    "samples": 255555,
+    "busy_drops": 0,
+    "queue_drops": 0,
+    "invalid_samples": 0,
+    "spi_errors": 0,
+    "timeouts": 0,
+    "last_sample_us": 255852332,
+    "max_transfer_us": 191,
+    "telemetry": {
+      "frames_started": 25525,
+      "frames_completed": 25525,
+      "frames_dropped": 50,
+      "uart_errors": 0,
+      "tx_timeouts": 0,
+      "start_errors": 0,
+      "aborts": 0,
+      "abort_timeouts": 0,
+      "last_hal_error": 0,
+      "status_frames": 1,
+      "busy": 0,
+      "faulted": 0
+    }
+  },
+  "motion_test": {
+    "confirmed": true,
+    "motion_capture": {
+      "file": "fw6_motion_followup_20261019.txt",
+      "records": 499,
+      "capture_seconds": 5.0102961,
+      "boundary_fragments": []
+    },
+    "motion_channels": {
+      "ax": {
+        "min": -809,
+        "max": 1349,
+        "mean": 213.617
+      },
+      "ay": {
+        "min": -1461,
+        "max": -99,
+        "mean": -541.267
+      },
+      "az": {
+        "min": -5148,
+        "max": -1222,
+        "mean": -1866.527
+      },
+      "gx": {
+        "min": -1171,
+        "max": 898,
+        "mean": -35.244
+      },
+      "gy": {
+        "min": -1488,
+        "max": 1600,
+        "mean": 145.81
+      },
+      "gz": {
+        "min": -598,
+        "max": 933,
+        "mean": 50.916
+      },
+      "temp": {
+        "min": -1137,
+        "max": -1098,
+        "mean": -1117.752
+      }
+    },
+    "followup_capture": {
+      "file": "fw6_motion_settled_20261019.txt",
+      "records": 498,
+      "capture_seconds": 5.0060136,
+      "boundary_fragments": [
+        {
+          "line_index": 0,
+          "text": "122"
+        }
+      ]
+    },
+    "settled_last_100_records": {
+      "ax": {
+        "min": 0,
+        "max": 24,
+        "mean": 11.07
+      },
+      "ay": {
+        "min": -3,
+        "max": 16,
+        "mean": 7.89
+      },
+      "az": {
+        "min": -2046,
+        "max": -2021,
+        "mean": -2033.2
+      },
+      "gx": {
+        "min": -48,
+        "max": -44,
+        "mean": -46.11
+      },
+      "gy": {
+        "min": 12,
+        "max": 18,
+        "mean": 15.64
+      },
+      "gz": {
+        "min": -26,
+        "max": -23,
+        "mean": -24.2
+      },
+      "temp": {
+        "min": -1134,
+        "max": -1105,
+        "mean": -1121.04
+      }
+    },
+    "settled_gravity_counts": 2033.245,
+    "post_motion_state": {
+      "state": 6,
+      "error": 0,
+      "id": 104,
+      "reg": 0,
+      "wr": 0,
+      "rd": 0,
+      "drdy_count": 1108044,
+      "samples": 1108044,
+      "busy_drops": 0,
+      "queue_drops": 0,
+      "invalid_samples": 0,
+      "spi_errors": 0,
+      "timeouts": 0,
+      "last_sample_us": 1107292462,
+      "max_transfer_us": 191,
+      "telemetry": {
+        "frames_started": 110669,
+        "frames_completed": 110669,
+        "frames_dropped": 50,
+        "uart_errors": 0,
+        "tx_timeouts": 0,
+        "start_errors": 0,
+        "aborts": 0,
+        "abort_timeouts": 0,
+        "last_hal_error": 0,
+        "status_frames": 1,
+        "busy": 0,
+        "faulted": 0
+      }
+    }
+  }
+}

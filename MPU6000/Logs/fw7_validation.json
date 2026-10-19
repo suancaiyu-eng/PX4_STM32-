@@ -1,0 +1,366 @@
+{
+  "firmware": "FW7 FireWater11 AHRS6",
+  "steady_A": {
+    "driver": {
+      "drdy": 66177,
+      "samples": 66177,
+      "busy_drops": 0,
+      "queue_drops": 0,
+      "invalid_samples": 0,
+      "spi_errors": 0,
+      "timeouts": 0,
+      "timestamp": 66707989,
+      "max_dma_us": 190,
+      "state": 6,
+      "error": 0,
+      "id": 104
+    },
+    "uart": {
+      "started": 6610,
+      "completed": 6610,
+      "dropped": 50,
+      "errors": 0,
+      "timeouts": 0,
+      "start_errors": 0,
+      "aborts": 0,
+      "abort_timeouts": 0,
+      "hal_error": 0,
+      "status_frames": 1,
+      "busy": 0,
+      "faulted": 0,
+      "attitude_frames": 6410,
+      "attitude_status_frames": 2
+    },
+    "attitude": {
+      "timestamp": 66706990,
+      "sequence": 66176,
+      "state": 2,
+      "error": 0,
+      "flags": 15,
+      "q": [
+        0.9999956488609314,
+        0.0011278040474280715,
+        0.0021939068101346493,
+        0.0016451694536954165
+      ],
+      "euler_deg": [
+        0.12965121111413738,
+        0.25119029192841524,
+        0.1888074128145517
+      ],
+      "bias_rad_s": [
+        0.01634489744901657,
+        0.04865366220474243,
+        -0.024413328617811203
+      ],
+      "inputs": 66178,
+      "predictions": 64178,
+      "corrections": 12819,
+      "publications": 12820,
+      "calibration_samples": 2000,
+      "calibration_restarts": 0,
+      "accel_rejections": 9,
+      "timing_faults": 0,
+      "gap_faults": 0,
+      "max_update_us": 13
+    }
+  },
+  "steady_B": {
+    "driver": {
+      "drdy": 101020,
+      "samples": 101020,
+      "busy_drops": 0,
+      "queue_drops": 0,
+      "invalid_samples": 0,
+      "spi_errors": 0,
+      "timeouts": 0,
+      "timestamp": 101507434,
+      "max_dma_us": 190,
+      "state": 6,
+      "error": 0,
+      "id": 104
+    },
+    "uart": {
+      "started": 10090,
+      "completed": 10090,
+      "dropped": 50,
+      "errors": 0,
+      "timeouts": 0,
+      "start_errors": 0,
+      "aborts": 0,
+      "abort_timeouts": 0,
+      "hal_error": 0,
+      "status_frames": 1,
+      "busy": 0,
+      "faulted": 0,
+      "attitude_frames": 9890,
+      "attitude_status_frames": 2
+    },
+    "attitude": {
+      "timestamp": 101506435,
+      "sequence": 101019,
+      "state": 2,
+      "error": 0,
+      "flags": 15,
+      "q": [
+        0.9988386631011963,
+        0.001171405310742557,
+        0.0019973847083747387,
+        -0.04812566190958023
+      ],
+      "euler_deg": [
+        0.12306324019560887,
+        0.23507832924360475,
+        -5.516688297332292
+      ],
+      "bias_rad_s": [
+        0.01634489744901657,
+        0.04865366220474243,
+        -0.024413328617811203
+      ],
+      "inputs": 101020,
+      "predictions": 99020,
+      "corrections": 19779,
+      "publications": 19780,
+      "calibration_samples": 2000,
+      "calibration_restarts": 0,
+      "accel_rejections": 12,
+      "timing_faults": 0,
+      "gap_faults": 0,
+      "max_update_us": 13
+    }
+  },
+  "measured_rates_hz": {
+    "predictions": 1001.2228643301639,
+    "corrections": 200.00318970604275,
+    "publications": 200.00318970604275
+  },
+  "uart_records": 5999,
+  "capture_seconds": 60.013235,
+  "uart_hz": 99.96128354020576,
+  "channels": {
+    "ax": {
+      "min": -417,
+      "max": 760,
+      "mean": 4.860643440573429,
+      "stdev": 16.29798107181447
+    },
+    "ay": {
+      "min": -502,
+      "max": 539,
+      "mean": 8.250708451408569,
+      "stdev": 14.81376827042696
+    },
+    "az": {
+      "min": -2903,
+      "max": -1532,
+      "mean": -2025.8414735789297,
+      "stdev": 21.55551314443895
+    },
+    "gx": {
+      "min": -231,
+      "max": 30,
+      "mean": -45.750125020836805,
+      "stdev": 2.98812556353248
+    },
+    "gy": {
+      "min": -203,
+      "max": 201,
+      "mean": 15.411235205867644,
+      "stdev": 5.296768488168703
+    },
+    "gz": {
+      "min": -2794,
+      "max": 83,
+      "mean": -24.507417902983832,
+      "stdev": 54.96710653154874
+    },
+    "temp": {
+      "min": -1542,
+      "max": -1481,
+      "mean": -1514.278546424404,
+      "stdev": 6.501535958200398
+    },
+    "roll": {
+      "min": -0.029,
+      "max": 0.472,
+      "mean": 0.131759459909985,
+      "stdev": 0.016309454819043886
+    },
+    "pitch": {
+      "min": 0.084,
+      "max": 0.59,
+      "mean": 0.23296266044340724,
+      "stdev": 0.018043490070166746
+    },
+    "yaw": {
+      "min": -5.538,
+      "max": 0.225,
+      "mean": -1.7314757459576595,
+      "stdev": 2.542502997825666
+    },
+    "valid": {
+      "min": 1,
+      "max": 1,
+      "mean": 1,
+      "stdev": 0.0
+    }
+  },
+  "capture_boundary_fragments": [],
+  "flash_verified_bytes": 23460,
+  "compatibility_builds": {
+    "binary": {
+      "exit": 0,
+      "log": "fw7_compat_binary.log",
+      "hex": "D:\\pixhawk2.4.8\\code_keil\\MPU6000\\Logs\\fw7_compat_binary\\MPU6000_binary.hex"
+    },
+    "raw7": {
+      "exit": 0,
+      "log": "fw7_compat_raw7.log",
+      "hex": "D:\\pixhawk2.4.8\\code_keil\\MPU6000\\Logs\\fw7_compat_raw7\\MPU6000_raw7.hex"
+    }
+  },
+  "warm_resets": [
+    {
+      "round": 1,
+      "valid_records": 227
+    },
+    {
+      "round": 2,
+      "valid_records": 344
+    }
+  ],
+  "fault_injection": {
+    "driver": {
+      "drdy": 116719,
+      "samples": 116719,
+      "busy_drops": 0,
+      "queue_drops": 0,
+      "invalid_samples": 0,
+      "spi_errors": 0,
+      "timeouts": 1,
+      "timestamp": 117186811,
+      "max_dma_us": 190,
+      "state": 7,
+      "error": 7,
+      "id": 104
+    },
+    "uart": {
+      "started": 11663,
+      "completed": 11663,
+      "dropped": 469,
+      "errors": 0,
+      "timeouts": 0,
+      "start_errors": 0,
+      "aborts": 0,
+      "abort_timeouts": 0,
+      "hal_error": 0,
+      "status_frames": 6,
+      "busy": 0,
+      "faulted": 0,
+      "attitude_frames": 11458,
+      "attitude_status_frames": 2
+    },
+    "attitude": {
+      "timestamp": 117186811,
+      "sequence": 116719,
+      "state": 3,
+      "error": 4,
+      "flags": 14,
+      "q": [
+        0.9988555312156677,
+        0.001257516909390688,
+        0.0018909015925601125,
+        -0.047774787992239
+      ],
+      "euler_deg": [
+        0.13358511993158706,
+        0.2233183309782163,
+        -5.47642603972236
+      ],
+      "bias_rad_s": [
+        0.01634489744901657,
+        0.04865366220474243,
+        -0.024413328617811203
+      ],
+      "inputs": 116719,
+      "predictions": 114719,
+      "corrections": 22915,
+      "publications": 22916,
+      "calibration_samples": 2000,
+      "calibration_restarts": 0,
+      "accel_rejections": 12,
+      "timing_faults": 0,
+      "gap_faults": 0,
+      "max_update_us": 13
+    }
+  },
+  "final_state": {
+    "driver": {
+      "drdy": 360379,
+      "samples": 360379,
+      "busy_drops": 0,
+      "queue_drops": 0,
+      "invalid_samples": 0,
+      "spi_errors": 0,
+      "timeouts": 0,
+      "timestamp": 360542676,
+      "max_dma_us": 190,
+      "state": 6,
+      "error": 0,
+      "id": 104
+    },
+    "uart": {
+      "started": 35994,
+      "completed": 35993,
+      "dropped": 50,
+      "errors": 0,
+      "timeouts": 0,
+      "start_errors": 0,
+      "aborts": 0,
+      "abort_timeouts": 0,
+      "hal_error": 0,
+      "status_frames": 1,
+      "busy": 1,
+      "faulted": 0,
+      "attitude_frames": 35794,
+      "attitude_status_frames": 2
+    },
+    "attitude": {
+      "timestamp": 360541677,
+      "sequence": 360378,
+      "state": 2,
+      "error": 0,
+      "flags": 15,
+      "q": [
+        0.9997673630714417,
+        0.0010788250947371125,
+        0.0018124198541045189,
+        0.02146865613758564
+      ],
+      "euler_deg": [
+        0.1280551880041758,
+        0.20498608990568884,
+        2.4605506756179407
+      ],
+      "bias_rad_s": [
+        0.016398128122091293,
+        0.04856056720018387,
+        -0.024474499747157097
+      ],
+      "inputs": 360380,
+      "predictions": 358380,
+      "corrections": 71586,
+      "publications": 71587,
+      "calibration_samples": 2000,
+      "calibration_restarts": 0,
+      "accel_rejections": 4,
+      "timing_faults": 0,
+      "gap_faults": 0,
+      "max_update_us": 14
+    }
+  },
+  "hex_sha256": "8351d34edf37c5b37b45d12461da00728eebe905771c7b4ecc8e8948c76c25ef",
+  "motion_validation": "Actual C checked against analytic +/-90 degree rotations and coupled motion; no physical rotation requested for this migration run",
+  "limitations": "Relative yaw only; startup stationary gyro bias, not full accelerometer calibration or flight acceptance"
+}

@@ -1,0 +1,35 @@
+{
+  "base": 536872476,
+  "symbols": {
+    "g_attitude_max_update_us": {
+      "size": 4,
+      "address": 536871028
+    },
+    "g_mag_sample": {
+      "size": 40,
+      "address": 536872856
+    },
+    "g_attitude": {
+      "size": 180,
+      "address": 536872584
+    },
+    "g_mag_status": {
+      "size": 92,
+      "address": 536872764
+    },
+    "g_telemetry_status": {
+      "size": 52,
+      "address": 536872520
+    },
+    "g_spi_bus_status": {
+      "size": 24,
+      "address": 536872896
+    },
+    "g_imu_status": {
+      "size": 44,
+      "address": 536872476
+    }
+  },
+  "size": 444,
+  "utc": "2026-10-19T06:57:32.8720253Z"
+}

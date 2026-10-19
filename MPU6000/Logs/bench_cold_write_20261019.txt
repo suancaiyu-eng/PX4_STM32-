@@ -1,0 +1,11 @@
+#BOOT MPU6000 BENCH USART2=460800 FireWater
+#PROBE mpu=68/00/00 pwr=00 gyro=D4 accmag=49 en=1 csL=0 csH=1 sck=1 hal=00
+#WRITE early=0 prod=00 id=00 pwr=00 d55=00 dAA=00 d10=00 u10=10 u40=10 u50=10 err=0
+#WRITE early=1 prod=00 id=00 pwr=00 d55=00 dAA=00 d10=00 u10=10 u40=10 u50=10 err=0
+#IMU state=1 error=0 id=0x00 reg=0x00 wr=00 rd=00 drdy=0 samples=0 spi=0 timeout=0
+#IMU state=7 error=3 id=0x68 reg=0x6B wr=40 rd=00 drdy=0 samples=0 spi=0 timeout=0
+#IMU state=7 error=3 id=0x68 reg=0x6B wr=40 rd=00 drdy=0 samples=0 spi=0 timeout=0
+#IMU state=7 error=3 id=0x68 reg=0x6B wr=40 rd=00 drdy=0 samples=0 spi=0 timeout=0
+#IMU state=7 error=3 id=0x68 reg=0x6B wr=40 rd=00 drdy=0 samples=0 spi=0 timeout=0
+#IMU state=7 error=3 id=0x68 reg=0x6B wr=40 rd=00 drdy=0 samples=0 spi=0 timeout=0
+#IMU state=7 error=3 id=0x68 reg=0x6B wr=40 rd=00 drdy=0 samples=0 spi=0 timeout=0

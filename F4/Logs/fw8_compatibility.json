@@ -1,0 +1,12 @@
+{
+  "binary": {
+    "exit": 0,
+    "log": "fw8_compat_binary.log",
+    "hex": "D:\\pixhawk2.4.8\\code_keil\\MPU6000\\Logs\\fw8_compat_binary\\MPU6000_binary.hex"
+  },
+  "raw7": {
+    "exit": 0,
+    "log": "fw8_compat_raw7.log",
+    "hex": "D:\\pixhawk2.4.8\\code_keil\\MPU6000\\Logs\\fw8_compat_raw7\\MPU6000_raw7.hex"
+  }
+}

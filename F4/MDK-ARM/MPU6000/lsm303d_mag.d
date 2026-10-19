@@ -1,0 +1,9 @@
+mpu6000\lsm303d_mag.o: ../Core/Src/lsm303d_mag.c
+mpu6000\lsm303d_mag.o: ../Core/Inc/lsm303d_mag.h
+mpu6000\lsm303d_mag.o: D:\Users\21144\AppData\Local\Keil_v5\ARM\Arm_Compiler_5.06u7\Bin\..\include\stdbool.h
+mpu6000\lsm303d_mag.o: D:\Users\21144\AppData\Local\Keil_v5\ARM\Arm_Compiler_5.06u7\Bin\..\include\stdint.h
+mpu6000\lsm303d_mag.o: ../Core/Inc/mag_calibration_params.h
+mpu6000\lsm303d_mag.o: D:\Users\21144\AppData\Local\Keil_v5\ARM\Arm_Compiler_5.06u7\Bin\..\include\math.h
+mpu6000\lsm303d_mag.o: D:\Users\21144\AppData\Local\Keil_v5\ARM\Arm_Compiler_5.06u7\Bin\..\include\float.h
+mpu6000\lsm303d_mag.o: D:\Users\21144\AppData\Local\Keil_v5\ARM\Arm_Compiler_5.06u7\Bin\..\include\stddef.h
+mpu6000\lsm303d_mag.o: D:\Users\21144\AppData\Local\Keil_v5\ARM\Arm_Compiler_5.06u7\Bin\..\include\string.h
