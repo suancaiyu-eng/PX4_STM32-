@@ -1,0 +1,29 @@
+      -------------------------------------------------------------------
+                       STM32CubeProgrammer v2.23.0                  
+      -------------------------------------------------------------------
+
+ST-LINK SN  : 35FF72063448303417211657
+ST-LINK FW  : V2J46S7
+Board       : --
+Voltage     : 3.08V
+SWD freq    : 950 KHz
+Connect mode: Hot Plug
+Reset mode  : Software reset
+Device ID   : 0x419
+Revision ID : Rev 3
+Device name : STM32F42xxx/F43xxx
+NVM size    : 2 MBytes
+Device type : MCU
+Device CPU  : Cortex-M4
+BL Version  : 0x91
+
+
+UPLOADING ...
+  File          : D:\pixhawk2.4.8\code_keil\F4\Logs\f4_board_link_60s_001.bin
+  Size          : 1088 Bytes
+  Address:      : 0x20000A50
+Read progress:
+�������������������������������������������������� 0%�������������������������������������������������� 100%
+
+Data read successfully
+Time elapsed during read operation is: 00:00:00.017

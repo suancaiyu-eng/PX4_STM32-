@@ -1,0 +1,32 @@
+[
+  {
+    "baud": 230400,
+    "bytes": 0,
+    "gyro_lines": 0,
+    "preview": ""
+  },
+  {
+    "baud": 57600,
+    "bytes": 0,
+    "gyro_lines": 0,
+    "preview": ""
+  },
+  {
+    "baud": 9600,
+    "bytes": 0,
+    "gyro_lines": 0,
+    "preview": ""
+  },
+  {
+    "baud": 921600,
+    "bytes": 0,
+    "gyro_lines": 0,
+    "preview": ""
+  },
+  {
+    "baud": 460800,
+    "bytes": 0,
+    "gyro_lines": 0,
+    "preview": ""
+  }
+]

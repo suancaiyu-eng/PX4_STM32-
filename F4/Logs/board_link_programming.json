@@ -1,0 +1,8 @@
+{
+  "firmware": "D:\\pixhawk2.4.8\\code_keil\\F4\\MDK-ARM\\MPU6000\\MPU6000.hex",
+  "sha256": "36af27ec0df2514211582344b54d1e89cbbad5579c3dccc82ea3a8f9bfb00f5e",
+  "backup": "D:\\pixhawk2.4.8\\code_keil\\F4\\Logs\\F4_before_board_link_20261019_180344.bin",
+  "flash_kib": 2048,
+  "device_id": 1049,
+  "backup_sha256": "03bb709dda123570edf4461576671e87e975d445fd8361ff3f809bc8a2dd1a0e"
+}

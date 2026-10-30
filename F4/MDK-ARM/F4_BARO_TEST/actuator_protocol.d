@@ -1,0 +1,7 @@
+f4_baro_test\actuator_protocol.o: ../../../firmware/common/actuator_protocol.c
+f4_baro_test\actuator_protocol.o: ../../../firmware/common/actuator_protocol.h
+f4_baro_test\actuator_protocol.o: ../../../firmware/common/board_link_protocol.h
+f4_baro_test\actuator_protocol.o: D:\Users\21144\AppData\Local\Keil_v5\ARM\Arm_Compiler_5.06u7\Bin\..\include\stdbool.h
+f4_baro_test\actuator_protocol.o: D:\Users\21144\AppData\Local\Keil_v5\ARM\Arm_Compiler_5.06u7\Bin\..\include\stddef.h
+f4_baro_test\actuator_protocol.o: D:\Users\21144\AppData\Local\Keil_v5\ARM\Arm_Compiler_5.06u7\Bin\..\include\stdint.h
+f4_baro_test\actuator_protocol.o: D:\Users\21144\AppData\Local\Keil_v5\ARM\Arm_Compiler_5.06u7\Bin\..\include\string.h

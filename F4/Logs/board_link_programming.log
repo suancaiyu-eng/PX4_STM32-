@@ -1,0 +1,57 @@
+      -------------------------------------------------------------------
+                       STM32CubeProgrammer v2.23.0                  
+      -------------------------------------------------------------------
+
+ST-LINK SN  : 35FF72063448303417211657
+ST-LINK FW  : V2J46S7
+Board       : --
+Voltage     : 3.07V
+SWD freq    : 950 KHz
+Connect mode: Normal
+Reset mode  : Software reset
+Device ID   : 0x419
+Revision ID : Rev 3
+Device name : STM32F42xxx/F43xxx
+NVM size    : 2 MBytes
+Device type : MCU
+Device CPU  : Cortex-M4
+BL Version  : 0x91
+
+
+
+Opening and parsing file: MPU6000.hex
+
+
+Memory Programming ...
+  File          : MPU6000.hex
+  Size          : 30.05 KB 
+  Address       : 0x08000000
+
+
+Erasing memory corresponding to segment 0:
+Erasing internal memory sectors [0 1]
+Download in Progress:
+�������������������������������������������������� 0%�������������������������������������������������� 100%
+
+File download complete
+Time elapsed during download operation: 00:00:01.283
+
+
+
+Verifying...
+
+
+Read progress:
+�������������������������������������������������� 50%�������������������������������������������������� 100%
+
+Time elapsed during verifying operation: 00:00:00.470
+
+
+Download verified successfully
+
+
+
+MCU Reset
+
+Software reset is performed
+Core run

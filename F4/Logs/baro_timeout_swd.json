@@ -1,0 +1,221 @@
+{
+  "target": "F4_BARO_TEST",
+  "verified_flash_bytes": 35720,
+  "flash_sha256": "b58223b0fa9eea119c0427eff33566c1b5081c031b64556d6c31ba27f6a3039a",
+  "symbols": {
+    "g_baro_status": [
+      536874596,
+      72
+    ],
+    "g_baro_sample": [
+      536874668,
+      44
+    ],
+    "g_imu_status": [
+      536874152,
+      44
+    ],
+    "g_mag_status": [
+      536874440,
+      92
+    ],
+    "g_spi_bus_status": [
+      536874572,
+      24
+    ],
+    "g_attitude": [
+      536874260,
+      180
+    ],
+    "g_baro_pressure_valid": [
+      536871048,
+      4
+    ],
+    "g_baro_altitude_valid": [
+      536871052,
+      4
+    ]
+  },
+  "snapshots": [
+    {
+      "host_monotonic": 22132.765,
+      "baro": {
+        "state": 3,
+        "error": 6,
+        "model": 5611,
+        "samples": 4986,
+        "bus_errors": 0,
+        "busy_skips": 103778,
+        "last_sample_us": 104025116,
+        "max_interval_us": 21572,
+        "reference_samples": 100,
+        "reference_resets": 0,
+        "crc_expected": 0,
+        "crc_actual": 0,
+        "flags": 0,
+        "prom0": 0,
+        "prom1": 44490,
+        "prom2": 48500,
+        "prom3": 26881,
+        "prom4": 25419,
+        "prom5": 34231,
+        "prom6": 27531,
+        "prom7": 0,
+        "reference_pressure_pa": 99842.6171875
+      },
+      "sample": {
+        "timestamp_us": 104025116,
+        "sequence": 4986,
+        "flags": 0,
+        "d1": 9142818,
+        "d2": 9129088,
+        "pressure_pa": 99854,
+        "temperature_centi_c": 3201,
+        "pressure_ms5611_pa": 99854,
+        "pressure_ms5607_pa": 199709,
+        "relative_altitude_m": -0.9617877006530762,
+        "filtered_altitude_m": -0.8941592574119568
+      },
+      "imu": {
+        "state": 6,
+        "error": 0,
+        "who_am_i": 104,
+        "bad_register": 0,
+        "readback_expected": 0,
+        "readback_actual": 0,
+        "drdy_count": 104687,
+        "samples": 104687,
+        "busy_drops": 0,
+        "queue_drops": 0,
+        "invalid_samples": 0,
+        "spi_errors": 0,
+        "timeouts": 0,
+        "last_sample_us": 105166384,
+        "max_transfer_us": 192
+      },
+      "mag": {
+        "state": 2,
+        "error": 0,
+        "who_am_i": 73,
+        "bad_register": 0,
+        "expected": 0,
+        "actual": 0,
+        "samples": 10122,
+        "not_ready": 16016,
+        "overruns": 1,
+        "bus_errors": 0,
+        "invalid_samples": 0,
+        "last_sample_us": 105159622,
+        "max_interval_us": 20577,
+        "calibration_valid": 1
+      },
+      "spi": {
+        "transactions": 46216,
+        "busy_skips": 328483,
+        "errors": 0,
+        "deferred_drdy": 0,
+        "lost_drdy": 0,
+        "max_transfer_us": 122
+      },
+      "attitude": {
+        "timestamp_us": 105165385,
+        "sequence": 104686,
+        "state": 2,
+        "error": 0,
+        "flags": 15
+      },
+      "pressure_valid": 0,
+      "altitude_valid": 0
+    },
+    {
+      "host_monotonic": 22134.031,
+      "baro": {
+        "state": 3,
+        "error": 6,
+        "model": 5611,
+        "samples": 4986,
+        "bus_errors": 0,
+        "busy_skips": 103778,
+        "last_sample_us": 104025116,
+        "max_interval_us": 21572,
+        "reference_samples": 100,
+        "reference_resets": 0,
+        "crc_expected": 0,
+        "crc_actual": 0,
+        "flags": 0,
+        "prom0": 0,
+        "prom1": 44490,
+        "prom2": 48500,
+        "prom3": 26881,
+        "prom4": 25419,
+        "prom5": 34231,
+        "prom6": 27531,
+        "prom7": 0,
+        "reference_pressure_pa": 99842.6171875
+      },
+      "sample": {
+        "timestamp_us": 104025116,
+        "sequence": 4986,
+        "flags": 0,
+        "d1": 9142818,
+        "d2": 9129088,
+        "pressure_pa": 99854,
+        "temperature_centi_c": 3201,
+        "pressure_ms5611_pa": 99854,
+        "pressure_ms5607_pa": 199709,
+        "relative_altitude_m": -0.9617877006530762,
+        "filtered_altitude_m": -0.8941592574119568
+      },
+      "imu": {
+        "state": 6,
+        "error": 0,
+        "who_am_i": 104,
+        "bad_register": 0,
+        "readback_expected": 0,
+        "readback_actual": 0,
+        "drdy_count": 105942,
+        "samples": 105942,
+        "busy_drops": 0,
+        "queue_drops": 0,
+        "invalid_samples": 0,
+        "spi_errors": 0,
+        "timeouts": 0,
+        "last_sample_us": 106420795,
+        "max_transfer_us": 192
+      },
+      "mag": {
+        "state": 2,
+        "error": 0,
+        "who_am_i": 73,
+        "bad_register": 0,
+        "expected": 0,
+        "actual": 0,
+        "samples": 10245,
+        "not_ready": 16207,
+        "overruns": 1,
+        "bus_errors": 0,
+        "invalid_samples": 0,
+        "last_sample_us": 106419419,
+        "max_interval_us": 20577,
+        "calibration_valid": 1
+      },
+      "spi": {
+        "transactions": 46530,
+        "busy_skips": 330410,
+        "errors": 0,
+        "deferred_drdy": 0,
+        "lost_drdy": 0,
+        "max_transfer_us": 122
+      },
+      "attitude": {
+        "timestamp_us": 106419797,
+        "sequence": 105942,
+        "state": 2,
+        "error": 0,
+        "flags": 15
+      },
+      "pressure_valid": 0,
+      "altitude_valid": 0
+    }
+  ]
+}

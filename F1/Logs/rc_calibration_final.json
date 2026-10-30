@@ -1,0 +1,171 @@
+{
+  "phase": "range",
+  "time": "2026-10-19T20:14:30.506879+08:00",
+  "samples": 435,
+  "valid_samples": 435,
+  "states": {
+    "OK": 435
+  },
+  "error_increments": {
+    "uart_errors": 0,
+    "invalid_frames": 0,
+    "queue_drops": 0,
+    "buffer_overflows": 0,
+    "frame_lost_reports": 0,
+    "failsafe_reports": 0
+  },
+  "telemetry_sequence_gaps": 0,
+  "latest": {
+    "last_frame_ms": 450842,
+    "age_ms": 12,
+    "frame_count": 33572,
+    "uart_errors": 0,
+    "invalid_frames": 0,
+    "queue_drops": 0,
+    "buffer_overflows": 0,
+    "frame_lost_reports": 0,
+    "failsafe_reports": 0,
+    "status": "OK",
+    "flags": 3,
+    "channels": [
+      997,
+      1002,
+      1503,
+      997,
+      200,
+      1800,
+      1800,
+      1800,
+      1800,
+      208
+    ],
+    "sequence": null,
+    "valid": true,
+    "elapsed_seconds": 40.156
+  },
+  "frame_increment": 9490,
+  "healthy": true,
+  "channels": [
+    {
+      "channel": 1,
+      "min": 206,
+      "center": 1000,
+      "max": 1800,
+      "span": 1594,
+      "neutral": 1000,
+      "center_method": "measured-neutral",
+      "min_hits": 29,
+      "max_hits": 31,
+      "calibrated": true
+    },
+    {
+      "channel": 2,
+      "min": 200,
+      "center": 995,
+      "max": 1793,
+      "span": 1593,
+      "neutral": 995,
+      "center_method": "measured-neutral",
+      "min_hits": 30,
+      "max_hits": 33,
+      "calibrated": true
+    },
+    {
+      "channel": 3,
+      "min": 206,
+      "center": 1000,
+      "max": 1800,
+      "span": 1594,
+      "neutral": 1000,
+      "center_method": "measured-neutral",
+      "min_hits": 29,
+      "max_hits": 32,
+      "calibrated": true
+    },
+    {
+      "channel": 4,
+      "min": 200,
+      "center": 996,
+      "max": 1800,
+      "span": 1600,
+      "neutral": 996,
+      "center_method": "measured-neutral",
+      "min_hits": 28,
+      "max_hits": 27,
+      "calibrated": true
+    },
+    {
+      "channel": 5,
+      "min": 200,
+      "center": 1000,
+      "max": 1800,
+      "span": 1600,
+      "neutral": 1000,
+      "center_method": "measured-neutral",
+      "min_hits": 285,
+      "max_hits": 28,
+      "calibrated": true
+    },
+    {
+      "channel": 6,
+      "min": 200,
+      "center": 1000,
+      "max": 1800,
+      "span": 1600,
+      "neutral": 200,
+      "center_method": "range-midpoint",
+      "min_hits": 295,
+      "max_hits": 123,
+      "calibrated": true
+    },
+    {
+      "channel": 7,
+      "min": 1800,
+      "center": 1800,
+      "max": 1800,
+      "span": 0,
+      "neutral": 1800,
+      "center_method": "measured-neutral",
+      "min_hits": 435,
+      "max_hits": 435,
+      "calibrated": false
+    },
+    {
+      "channel": 8,
+      "min": 200,
+      "center": 1000,
+      "max": 1800,
+      "span": 1600,
+      "neutral": 1800,
+      "center_method": "range-midpoint",
+      "min_hits": 44,
+      "max_hits": 378,
+      "calibrated": true
+    },
+    {
+      "channel": 9,
+      "min": 200,
+      "center": 1000,
+      "max": 1800,
+      "span": 1600,
+      "neutral": 1800,
+      "center_method": "range-midpoint",
+      "min_hits": 16,
+      "max_hits": 419,
+      "calibrated": true
+    },
+    {
+      "channel": 10,
+      "min": 208,
+      "center": 1008,
+      "max": 1808,
+      "span": 1600,
+      "neutral": 208,
+      "center_method": "range-midpoint",
+      "min_hits": 207,
+      "max_hits": 228,
+      "calibrated": true
+    }
+  ],
+  "valid_mask": 959
+}

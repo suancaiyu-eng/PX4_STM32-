@@ -1,0 +1,166 @@
+User : 6 3 options.c:52 configuration_output_handler(): set log_output to "Logs/seekfree_dap_hid_debug.log"User : 7 3 options.c:52 configuration_output_handler(): 
+Debug: 8 3 configuration.c:33 add_script_search_dir(): adding D:/ST/STM32CubeIDE_2.2.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.debug.openocd_2.3.400.202606220929/resources/openocd/st_scripts
+Debug: 9 3 options.c:346 parse_cmdline_args(): ARGV[0] = "D:\ST\STM32CubeIDE_2.2.0\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.openocd.win32_2.4.500.202604080855\tools\bin\openocd.exe"
+Debug: 10 3 options.c:346 parse_cmdline_args(): ARGV[1] = "-d3"
+Debug: 11 3 options.c:346 parse_cmdline_args(): ARGV[2] = "-l"
+Debug: 12 3 options.c:346 parse_cmdline_args(): ARGV[3] = "Logs/seekfree_dap_hid_debug.log"
+Debug: 13 3 options.c:346 parse_cmdline_args(): ARGV[4] = "-s"
+Debug: 14 3 options.c:346 parse_cmdline_args(): ARGV[5] = "D:/ST/STM32CubeIDE_2.2.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.debug.openocd_2.3.400.202606220929/resources/openocd/st_scripts"
+Debug: 15 3 options.c:346 parse_cmdline_args(): ARGV[6] = "-f"
+Debug: 16 3 options.c:346 parse_cmdline_args(): ARGV[7] = "interface/cmsis-dap.cfg"
+Debug: 17 3 options.c:346 parse_cmdline_args(): ARGV[8] = "-c"
+Debug: 18 3 options.c:346 parse_cmdline_args(): ARGV[9] = "cmsis-dap backend hid"
+Debug: 19 3 options.c:346 parse_cmdline_args(): ARGV[10] = "-c"
+Debug: 20 3 options.c:346 parse_cmdline_args(): ARGV[11] = "transport select swd"
+Debug: 21 3 options.c:346 parse_cmdline_args(): ARGV[12] = "-f"
+Debug: 22 3 options.c:346 parse_cmdline_args(): ARGV[13] = "target/stm32f1x.cfg"
+Debug: 23 3 options.c:346 parse_cmdline_args(): ARGV[14] = "-c"
+Debug: 24 3 options.c:346 parse_cmdline_args(): ARGV[15] = "adapter serial 734611024680"
+Debug: 25 3 options.c:346 parse_cmdline_args(): ARGV[16] = "-c"
+Debug: 26 3 options.c:346 parse_cmdline_args(): ARGV[17] = "adapter speed 500"
+Debug: 27 3 options.c:346 parse_cmdline_args(): ARGV[18] = "-c"
+Debug: 28 3 options.c:346 parse_cmdline_args(): ARGV[19] = "init"
+Debug: 29 3 options.c:346 parse_cmdline_args(): ARGV[20] = "-c"
+Debug: 30 3 options.c:346 parse_cmdline_args(): ARGV[21] = "mdw 0xE000ED00 1"
+Debug: 31 3 options.c:346 parse_cmdline_args(): ARGV[22] = "-c"
+Debug: 32 3 options.c:346 parse_cmdline_args(): ARGV[23] = "mdw 0xE0042000 1"
+Debug: 33 3 options.c:346 parse_cmdline_args(): ARGV[24] = "-c"
+Debug: 34 3 options.c:346 parse_cmdline_args(): ARGV[25] = "mdh 0x1FFFF7E0 1"
+Debug: 35 3 options.c:346 parse_cmdline_args(): ARGV[26] = "-c"
+Debug: 36 3 options.c:346 parse_cmdline_args(): ARGV[27] = "mdw 0x08000000 4"
+Debug: 37 3 options.c:346 parse_cmdline_args(): ARGV[28] = "-c"
+Debug: 38 3 options.c:346 parse_cmdline_args(): ARGV[29] = "shutdown"
+Debug: 39 4 options.c:233 add_default_dirs(): bindir=/src/work/openocd/win32/build/bin
+Debug: 40 4 options.c:234 add_default_dirs(): pkgdatadir=/src/work/openocd/win32/build/share/openocd
+Debug: 41 4 options.c:235 add_default_dirs(): exepath=D:/ST/STM32CubeIDE_2.2.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.openocd.win32_2.4.500.202604080855/tools/bin
+Debug: 42 4 options.c:236 add_default_dirs(): bin2data=../share/openocd
+Debug: 43 4 configuration.c:33 add_script_search_dir(): adding C:/Users/21144/AppData/Roaming/OpenOCD
+Debug: 44 4 configuration.c:33 add_script_search_dir(): adding D:/ST/STM32CubeIDE_2.2.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.openocd.win32_2.4.500.202604080855/tools/bin/../share/openocd/site
+Debug: 45 4 configuration.c:33 add_script_search_dir(): adding D:/ST/STM32CubeIDE_2.2.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.openocd.win32_2.4.500.202604080855/tools/bin/../share/openocd/scripts
+Debug: 46 4 command.c:153 script_debug(): command - ocd_find interface/cmsis-dap.cfg
+Debug: 47 4 configuration.c:88 find_file(): found D:/ST/STM32CubeIDE_2.2.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.debug.openocd_2.3.400.202606220929/resources/openocd/st_scripts/interface/cmsis-dap.cfg
+Debug: 48 8 command.c:153 script_debug(): command - adapter driver cmsis-dap
+Debug: 49 8 command.c:153 script_debug(): command - cmsis-dap backend hid
+Debug: 50 8 command.c:153 script_debug(): command - transport select swd
+User : 51 8 options.c:52 configuration_output_handler(): swdUser : 52 8 options.c:52 configuration_output_handler(): 
+Debug: 53 8 command.c:153 script_debug(): command - ocd_find target/stm32f1x.cfg
+Debug: 54 9 configuration.c:88 find_file(): found D:/ST/STM32CubeIDE_2.2.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.debug.openocd_2.3.400.202606220929/resources/openocd/st_scripts/target/stm32f1x.cfg
+Debug: 55 9 command.c:153 script_debug(): command - ocd_find target/swj-dp.tcl
+Debug: 56 10 configuration.c:88 find_file(): found D:/ST/STM32CubeIDE_2.2.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.debug.openocd_2.3.400.202606220929/resources/openocd/st_scripts/target/swj-dp.tcl
+Debug: 57 10 command.c:153 script_debug(): command - transport select
+Debug: 58 10 command.c:153 script_debug(): command - ocd_find mem_helper.tcl
+Debug: 59 10 configuration.c:88 find_file(): found D:/ST/STM32CubeIDE_2.2.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.debug.openocd_2.3.400.202606220929/resources/openocd/st_scripts/mem_helper.tcl
+Debug: 60 10 command.c:153 script_debug(): command - add_usage_text mrw address
+Debug: 61 10 command.c:153 script_debug(): command - add_help_text mrw Returns value of word in memory.
+Debug: 62 10 command.c:153 script_debug(): command - add_usage_text mrh address
+Debug: 63 10 command.c:153 script_debug(): command - add_help_text mrh Returns value of halfword in memory.
+Debug: 64 10 command.c:153 script_debug(): command - add_usage_text mrb address
+Debug: 65 10 command.c:153 script_debug(): command - add_help_text mrb Returns value of byte in memory.
+Debug: 66 10 command.c:153 script_debug(): command - add_usage_text mmw address setbits clearbits
+Debug: 67 10 command.c:153 script_debug(): command - add_help_text mmw Modify word in memory. new_val = (old_val & ~clearbits) | setbits;
+Debug: 68 10 command.c:153 script_debug(): command - ocd_find gdb_helper.tcl
+Debug: 69 11 configuration.c:88 find_file(): found D:/ST/STM32CubeIDE_2.2.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.debug.openocd_2.3.400.202606220929/resources/openocd/st_scripts/gdb_helper.tcl
+Debug: 70 11 command.c:153 script_debug(): command - transport select
+Debug: 71 11 command.c:153 script_debug(): command - transport select
+Debug: 72 11 command.c:153 script_debug(): command - transport select
+Debug: 73 11 command.c:153 script_debug(): command - transport select
+Debug: 74 11 command.c:153 script_debug(): command - swd newdap stm32f1x cpu -irlen 4 -ircapture 0x1 -irmask 0xf -expected-id 0x1ba01477
+Debug: 75 11 tcl.c:402 handle_jtag_newtap_args(): Creating New Tap, Chip: stm32f1x, Tap: cpu, Dotted: stm32f1x.cpu, 8 params
+Debug: 76 11 core.c:1478 jtag_tap_init(): Created Tap: stm32f1x.cpu @ abs position 0, irlen 4, capture: 0x1 mask: 0xf
+Debug: 77 11 command.c:153 script_debug(): command - dap create stm32f1x.dap -chain-position stm32f1x.cpu
+Debug: 78 11 command.c:153 script_debug(): command - target create stm32f1x.cpu cortex_m -endian little -dap stm32f1x.dap -ap-num 0 -gdb-max-connections 2
+Debug: 79 11 command.c:259 register_command(): command 'tpiu' is already registered
+Debug: 80 11 command.c:259 register_command(): command 'rtt' is already registered
+Debug: 81 11 command.c:153 script_debug(): command - tpiu create stm32f1x.tpiu -dap stm32f1x.dap -ap-num 0 -baseaddr 0xE0040000
+Debug: 82 11 command.c:153 script_debug(): command - stm32f1x.cpu configure -work-area-phys 0x20000000 -work-area-size 0x1000 -work-area-backup 1
+Debug: 83 11 target.c:2150 target_free_all_working_areas_restore(): freeing all working areas
+Debug: 84 11 target.c:2150 target_free_all_working_areas_restore(): freeing all working areas
+Debug: 85 11 target.c:2150 target_free_all_working_areas_restore(): freeing all working areas
+Debug: 86 11 command.c:153 script_debug(): command - flash bank stm32f1x.flash stm32f1x 0x08000000 0 0 0 stm32f1x.cpu
+Debug: 87 11 tcl.c:1306 handle_flash_bank_command(): 'stm32f1x' driver usage field missing
+Debug: 88 12 command.c:153 script_debug(): command - adapter speed 4000
+Debug: 89 12 adapter.c:250 adapter_config_khz(): handle adapter khz
+Debug: 90 12 adapter.c:214 adapter_khz_to_speed(): convert khz to adapter specific speed value
+Debug: 91 12 adapter.c:214 adapter_khz_to_speed(): convert khz to adapter specific speed value
+Debug: 92 12 command.c:153 script_debug(): command - adapter srst delay 100
+Debug: 93 12 command.c:153 script_debug(): command - transport select
+Debug: 94 12 command.c:153 script_debug(): command - transport select
+Debug: 95 12 command.c:153 script_debug(): command - cortex_m reset_config sysresetreq
+Debug: 96 12 command.c:153 script_debug(): command - stm32f1x.cpu configure -event examine-end 
+global _ENABLE_LOW_POWER
+global _STOP_WATCHDOG
+
+	if { $_ENABLE_LOW_POWER == 1 } {
+		# Enable debug during low power modes (uses more power)
+		# DBGMCU_CR |= DBG_STANDBY | DBG_STOP | DBG_SLEEP
+		mmw 0xE0042004 0x00000007 0
+	} else {
+		# Disable debug during low power modes
+		# DBGMCU_CR |= ~(DBG_STANDBY | DBG_STOP | DBG_SLEEP)
+		mmw 0xE0042004 0 0x00000007
+	}
+	if { $_STOP_WATCHDOG == 1 } {
+		# Stop watchdog counters during halt
+		# DBGMCU_CR |= DBG_WWDG_STOP | DBG_IWDG_STOP
+		mmw 0xE0042004 0x00000300 0
+	} else {
+		# Don't stop watchdog counters during halt
+		# DBGMCU_CR |= ~(DBG_WWDG_STOP | DBG_IWDG_STOP)
+		mmw 0xE0042004 0 0x00000300
+	}
+
+Debug: 97 12 command.c:153 script_debug(): command - stm32f1x.cpu configure -event reset-init 
+global _CLOCK_FREQ
+
+	adapter speed $_CLOCK_FREQ
+
+Debug: 98 12 command.c:153 script_debug(): command - stm32f1x.cpu configure -event reset-end 
+global FLASH_LOADERS
+global NAME_INITIALIZED_LOADER
+global INDEX_INITIALIZED_LOADER
+
+	if { [info exists INDEX_INITIALIZED_LOADER] } {
+		set NAME_INITIALIZED_LOADER [lindex $FLASH_LOADERS $INDEX_INITIALIZED_LOADER]
+		set flash_list [flash list]
+		for {set i 0} {$i < [llength $flash_list]} {incr i} {
+			if { [lindex [lindex $flash_list  $i] 1] == $NAME_INITIALIZED_LOADER } {
+				set INIT_BANK_ID $i
+				break
+			}
+		}
+		if { ![info exists INIT_BANK_ID] } {
+			echo "ERROR: can't find bank_id for stldr init"
+		} else {
+			stldr init $INIT_BANK_ID
+		}
+	}
+
+Debug: 99 12 command.c:153 script_debug(): command - stm32f1x.tpiu configure -event post-enable 
+	# Set TRACE_IOEN; TRACE_MODE is set to async; when using sync
+	# change this value accordingly to configure trace pins
+	# assignment
+	mmw 0xE0042004 0x00000020 0
+
+Debug: 100 12 command.c:153 script_debug(): command - stm32f1x.cpu configure -event gdb-attach  gdb_attach_hook 
+Debug: 101 12 command.c:153 script_debug(): command - stm32f1x.cpu configure -event gdb-detach  gdb_detach_hook 
+Debug: 102 12 command.c:153 script_debug(): command - adapter serial 734611024680
+Debug: 103 12 command.c:153 script_debug(): command - adapter speed 500
+Debug: 104 12 adapter.c:250 adapter_config_khz(): handle adapter khz
+Debug: 105 12 adapter.c:214 adapter_khz_to_speed(): convert khz to adapter specific speed value
+Debug: 106 12 adapter.c:214 adapter_khz_to_speed(): convert khz to adapter specific speed value
+User : 107 12 options.c:52 configuration_output_handler(): adapter speed: 500 kHzUser : 108 12 options.c:52 configuration_output_handler(): 
+Debug: 109 12 command.c:153 script_debug(): command - init
+Debug: 110 12 command.c:153 script_debug(): command - target init
+Debug: 111 12 command.c:153 script_debug(): command - target names
+Debug: 112 12 command.c:153 script_debug(): command - stm32f1x.cpu cget -event gdb-flash-erase-start
+Debug: 113 12 command.c:153 script_debug(): command - stm32f1x.cpu configure -event gdb-flash-erase-start reset init
+Debug: 114 12 command.c:153 script_debug(): command - stm32f1x.cpu cget -event gdb-flash-write-end
+Debug: 115 12 command.c:153 script_debug(): command - stm32f1x.cpu configure -event gdb-flash-write-end reset halt
+Debug: 116 12 command.c:153 script_debug(): command - stm32f1x.cpu cget -event gdb-attach
+Debug: 117 12 target.c:1608 handle_target_init_command(): Initializing targets...
+Debug: 118 12 semihosting_common.c:107 semihosting_common_init():  
+Error: 119 6172 cmsis_dap.c:449 cmsis_dap_cmd_dap_info(): CMSIS-DAP command CMD_INFO failed.
+Debug: 120 6172 command.c:529 exec_command(): Command 'init' failed with error code -107
+User : 121 6172 command.c:601 command_run_line(): 
+Debug: 122 6172 breakpoints.c:328 breakpoint_remove_all_internal(): [stm32f1x.cpu] Delete all breakpoints
+Debug: 123 6172 target.c:2150 target_free_all_working_areas_restore(): freeing all working areas

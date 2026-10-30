@@ -48,5 +48,7 @@ void MPU6000_Port_OnDataReady(uint32_t timestamp_us);
  * Short polling transactions (max 8 bytes), only in the IMU's idle window.
  * IRQs remain enabled; unexpected DRDY is deferred until the lease releases. */
 int MPU6000_Port_TransferMag(const uint8_t *tx, uint8_t *rx, uint16_t length);
+/* Same arbiter and timing window; PD7 CS, max 4 bytes, foreground only. */
+int MPU6000_Port_TransferBaro(const uint8_t *tx, uint8_t *rx, uint16_t length);
 void MPU6000_Port_GetBusStats(SensorSpiBusStats *stats);
 #endif

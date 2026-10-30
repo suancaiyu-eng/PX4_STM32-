@@ -22,6 +22,8 @@ typedef struct {
     uint32_t noise_errors;
     uint32_t overrun_errors;
     uint32_t restart_errors;
+    uint32_t frame_lost_reports;
+    uint32_t failsafe_reports;
 } r9ds_counters_t;
 
 typedef struct {

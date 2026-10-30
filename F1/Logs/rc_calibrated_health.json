@@ -1,0 +1,48 @@
+{
+  "phase": "health",
+  "time": "2026-10-19T20:15:03.328318+08:00",
+  "samples": 22,
+  "valid_samples": 22,
+  "states": {
+    "OK": 22
+  },
+  "error_increments": {
+    "uart_errors": 0,
+    "invalid_frames": 0,
+    "queue_drops": 0,
+    "buffer_overflows": 0,
+    "frame_lost_reports": 0,
+    "failsafe_reports": 0
+  },
+  "telemetry_sequence_gaps": 0,
+  "latest": {
+    "last_frame_ms": 9781,
+    "age_ms": 3,
+    "frame_count": 728,
+    "uart_errors": 0,
+    "invalid_frames": 0,
+    "queue_drops": 0,
+    "buffer_overflows": 0,
+    "frame_lost_reports": 0,
+    "failsafe_reports": 0,
+    "status": "OK",
+    "flags": 3,
+    "channels": [
+      994,
+      1002,
+      922,
+      997,
+      200,
+      1800,
+      1800,
+      1800,
+      1800,
+      1808
+    ],
+    "sequence": null,
+    "valid": true,
+    "elapsed_seconds": 5.032
+  },
+  "frame_increment": 361,
+  "healthy": true
+}

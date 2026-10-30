@@ -1,0 +1,12 @@
+{
+  "port": "COM5",
+  "baud": 460800,
+  "duration_seconds": 10,
+  "bytes": 11120,
+  "complete_rc_lines": 201,
+  "all_rc_valid": true,
+  "other_output_lines": 0,
+  "max_f1_age_ms": 14,
+  "example": "rc:995,1002,922,998,200,1800,1800,1800,1800,1808,1,1,12",
+  "port_closed_after_capture": true
+}

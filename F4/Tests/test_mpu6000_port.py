@@ -141,7 +141,7 @@ uint32_t primask, basepri;
 #define ALL_CS (MPU_CS_Pin | GYRO_CS_Pin | ACCEL_MAG_CS_Pin | BARO_CS_Pin)
 static unsigned gpio_levels, probe_reads, fail_read;
 static unsigned freeze_on_select, selected_at;
-static unsigned peer_mode, peer_inject, peer_fail, deferred_calls;
+static unsigned peer_mode, peer_inject, peer_fail, deferred_calls, peer_cs;
 static uint32_t deferred_timestamp;
 void HAL_GPIO_WritePin(int p, int n, int v)
 {
@@ -164,7 +164,7 @@ int HAL_SPI_TransmitReceive(SPI_HandleTypeDef *h, const uint8_t *t, uint8_t *r, 
     if(peer_mode) {
         MPU6000_BusProbe p;
         uint8_t reply[2];
-        assert(h == &hspi1 && n <= 8 && w == 2 && selected == ACCEL_MAG_CS_Pin);
+        assert(h == &hspi1 && n <= 8 && w == 2 && selected == peer_cs);
         assert(primask == 0); /* never mask IRQs during the transfer */
         assert(!MPU6000_Port_Recover());
         assert(!MPU6000_Port_Probe(&p));
@@ -193,7 +193,8 @@ int HAL_SPI_TransmitReceive(SPI_HandleTypeDef *h, const uint8_t *t, uint8_t *r, 
 }
 void MPU6000_OnSpiError(void) { ++error_calls; MPU6000_Port_Stop(); }
 void MPU6000_OnDataReady(uint32_t timestamp) {
-    assert((gpio_levels & ACCEL_MAG_CS_Pin) != 0); /* peer CS must be released */
+    assert((gpio_levels & (ACCEL_MAG_CS_Pin | BARO_CS_Pin)) ==
+           (ACCEL_MAG_CS_Pin | BARO_CS_Pin)); /* both peer CS must be released */
     ++deferred_calls; deferred_timestamp=timestamp;
 }
 void HAL_DMA_IRQHandler(DMA_HandleTypeDef *h)
@@ -222,6 +223,7 @@ static void reset(void)
     htim2.counter = 0;
     exti_regs.IMR = 0;
     peer_mode=peer_inject=peer_fail=deferred_calls=0;
+    peer_cs=ACCEL_MAG_CS_Pin;
     deferred_timestamp=0;
 }
 int main(void)
@@ -254,6 +256,24 @@ int main(void)
     reset(); peer_mode=1; timer_frozen=1;
     assert(MPU6000_Port_TransferMag(command,response,2) == -1);
     assert((gpio_levels & ALL_CS) == ALL_CS);
+    reset(); peer_mode=1; peer_cs=BARO_CS_Pin; peer_inject=1;
+    assert(MPU6000_Port_TransferBaro(command,response,2) == 1);
+    assert(deferred_calls == 1 && deferred_timestamp == 123456U);
+    assert((gpio_levels & ALL_CS) == ALL_CS);
+    assert(MPU6000_Port_TransferBaro(command,response,5) == -1);
+    reset(); peer_mode=1; peer_cs=BARO_CS_Pin;
+    MPU6000_Port_OnDataReady(100U); htim2.counter=200U;
+    assert(MPU6000_Port_TransferBaro(command,response,2) == 0);
+    htim2.counter=400U;
+    rx_regs.CR |= DMA_SxCR_EN;
+    assert(MPU6000_Port_TransferBaro(command,response,2) == 0);
+    rx_regs.CR &= ~DMA_SxCR_EN;
+    peer_fail=1;
+    assert(MPU6000_Port_TransferBaro(command,response,2) == -1);
+    assert((gpio_levels & ALL_CS) == ALL_CS);
+    reset(); peer_mode=1; peer_cs=BARO_CS_Pin; peer_inject=2;
+    assert(MPU6000_Port_TransferBaro(command,response,2) == -1);
+    assert(error_calls == 1 && deferred_calls == 0);
     reset();
     timer_frozen = 1;
     assert(!MPU6000_Port_TransferRegister(command, response, 2));

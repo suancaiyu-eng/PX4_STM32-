@@ -1,0 +1,9 @@
+baro_ms5611_check\lsm303d_mag.o: ../Core/Src/lsm303d_mag.c
+baro_ms5611_check\lsm303d_mag.o: ../Core/Inc/lsm303d_mag.h
+baro_ms5611_check\lsm303d_mag.o: D:\Users\21144\AppData\Local\Keil_v5\ARM\Arm_Compiler_5.06u7\Bin\..\include\stdbool.h
+baro_ms5611_check\lsm303d_mag.o: D:\Users\21144\AppData\Local\Keil_v5\ARM\Arm_Compiler_5.06u7\Bin\..\include\stdint.h
+baro_ms5611_check\lsm303d_mag.o: ../Core/Inc/mag_calibration_params.h
+baro_ms5611_check\lsm303d_mag.o: D:\Users\21144\AppData\Local\Keil_v5\ARM\Arm_Compiler_5.06u7\Bin\..\include\math.h
+baro_ms5611_check\lsm303d_mag.o: D:\Users\21144\AppData\Local\Keil_v5\ARM\Arm_Compiler_5.06u7\Bin\..\include\float.h
+baro_ms5611_check\lsm303d_mag.o: D:\Users\21144\AppData\Local\Keil_v5\ARM\Arm_Compiler_5.06u7\Bin\..\include\stddef.h
+baro_ms5611_check\lsm303d_mag.o: D:\Users\21144\AppData\Local\Keil_v5\ARM\Arm_Compiler_5.06u7\Bin\..\include\string.h

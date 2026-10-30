@@ -142,7 +142,8 @@ class NativeTelemetryTests(unittest.TestCase):
 #include <stdint.h>
 typedef struct { uint32_t CR; } DMA_Stream_TypeDef;
 typedef struct { DMA_Stream_TypeDef *Instance; } DMA_HandleTypeDef;
-typedef struct { DMA_HandleTypeDef *hdmatx; uint32_t ErrorCode; } UART_HandleTypeDef;
+typedef struct { DMA_HandleTypeDef *hdmatx; uint32_t ErrorCode;
+                 struct { uint32_t BaudRate; } Init; } UART_HandleTypeDef;
 typedef enum { HAL_OK, HAL_ERROR, HAL_BUSY, HAL_TIMEOUT } HAL_StatusTypeDef;
 #define DMA_SxCR_EN 1U
 #define __NVIC_PRIO_BITS 4U
@@ -167,8 +168,8 @@ HAL_StatusTypeDef HAL_UART_AbortTransmit_IT(UART_HandleTypeDef *);
 uint32_t test_basepri;
 static DMA_Stream_TypeDef stream;
 static DMA_HandleTypeDef dma = { &stream };
-static UART_HandleTypeDef uart = { &dma, 0 };
-static UART_HandleTypeDef other_uart = { &dma, 0 };
+static UART_HandleTypeDef uart = { &dma, 0, {460800U} };
+static UART_HandleTypeDef other_uart = { &dma, 0, {460800U} };
 static const uint8_t *live_buffer;
 static uint16_t live_length;
 static unsigned starts, aborts, immediate_abort;
@@ -422,10 +423,12 @@ int main(void) {
             (path / "stm32f4xx_hal.h").write_text(stub, encoding="utf-8")
             (path / "test.c").write_text(harness, encoding="utf-8")
             executable = path / "test.exe"
-            # FireWater test intentionally uses the firmware's default format.
-            format_option = ["-DIMU_TELEMETRY_OUTPUT_FORMAT=0"] if binary else []
+            # Exercise retained IMU formats explicitly; RC-only console silence
+            # has separate coverage in test_telem1_link.py.
+            format_option = [f"-DIMU_TELEMETRY_OUTPUT_FORMAT={0 if binary else 1}"]
             build = subprocess.run(
                 [shutil.which("gcc"), "-std=c11", "-Wall", "-Wextra", "-Werror",
+                 "-DIMU_TELEMETRY_RC_ONLY=0",
                  *format_option,
                  "-I", str(path), "-I", str(project / "Core" / "Inc"),
                  str(project / "Core" / "Src" / "imu_telemetry.c"),

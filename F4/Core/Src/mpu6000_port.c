@@ -84,7 +84,7 @@ void MPU6000_Port_OnDataReady(uint32_t timestamp_us)
     MPU6000_OnDataReady(timestamp_us);
 }
 
-int MPU6000_Port_TransferMag(const uint8_t *tx, uint8_t *rx, uint16_t length)
+static int transfer_peer(const uint8_t *tx, uint8_t *rx, uint16_t length, bool baro)
 {
     uint32_t key, started, elapsed, phase;
     bool ok;
@@ -108,11 +108,13 @@ int MPU6000_Port_TransferMag(const uint8_t *tx, uint8_t *rx, uint16_t length)
      * DRDY is timestamped and deferred by the arbiter if it arrives early. */
     ok = register_delay_10us();
     if (ok) {
-        HAL_GPIO_WritePin(ACCEL_MAG_CS_GPIO_Port, ACCEL_MAG_CS_Pin, GPIO_PIN_RESET);
+        if(baro) { HAL_GPIO_WritePin(BARO_CS_GPIO_Port, BARO_CS_Pin, GPIO_PIN_RESET); }
+        else { HAL_GPIO_WritePin(ACCEL_MAG_CS_GPIO_Port, ACCEL_MAG_CS_Pin, GPIO_PIN_RESET); }
         ok = register_delay_10us();
         if (ok) { ok = HAL_SPI_TransmitReceive(&hspi1, tx, rx, length, 2U) == HAL_OK; }
     }
-    HAL_GPIO_WritePin(ACCEL_MAG_CS_GPIO_Port, ACCEL_MAG_CS_Pin, GPIO_PIN_SET);
+    if(baro) { HAL_GPIO_WritePin(BARO_CS_GPIO_Port, BARO_CS_Pin, GPIO_PIN_SET); }
+    else { HAL_GPIO_WritePin(ACCEL_MAG_CS_GPIO_Port, ACCEL_MAG_CS_Pin, GPIO_PIN_SET); }
     elapsed = (uint32_t)(MPU6000_Port_NowUs() - started);
     if (elapsed > bus_stats.max_transfer_us) { bus_stats.max_transfer_us = elapsed; }
     ++bus_stats.transactions;
@@ -131,6 +133,17 @@ int MPU6000_Port_TransferMag(const uint8_t *tx, uint8_t *rx, uint16_t length)
     }
     MPU6000_Port_Unlock(key);
     return ok ? 1 : -1;
+}
+
+int MPU6000_Port_TransferMag(const uint8_t *tx, uint8_t *rx, uint16_t length)
+{
+    return transfer_peer(tx,rx,length,false);
+}
+
+int MPU6000_Port_TransferBaro(const uint8_t *tx, uint8_t *rx, uint16_t length)
+{
+    if(length > 4U) { return -1; }
+    return transfer_peer(tx,rx,length,true);
 }
 
 void MPU6000_Port_GetBusStats(SensorSpiBusStats *stats)

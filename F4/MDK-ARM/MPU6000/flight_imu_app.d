@@ -38,8 +38,8 @@ mpu6000\flight_imu_app.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart
 mpu6000\flight_imu_app.o: ../Core/Inc/mpu6000_port.h
 mpu6000\flight_imu_app.o: ../Core/Inc/attitude_estimator.h
 mpu6000\flight_imu_app.o: ../Core/Inc/lsm303d_mag.h
+mpu6000\flight_imu_app.o: ../Core/Inc/ms56xx_baro.h
 mpu6000\flight_imu_app.o: ../Core/Inc/main.h
 mpu6000\flight_imu_app.o: ../Core/Inc/spi.h
 mpu6000\flight_imu_app.o: ../Core/Inc/tim.h
 mpu6000\flight_imu_app.o: ../Core/Inc/usart.h
-mpu6000\flight_imu_app.o: D:\Users\21144\AppData\Local\Keil_v5\ARM\Arm_Compiler_5.06u7\Bin\..\include\stdio.h

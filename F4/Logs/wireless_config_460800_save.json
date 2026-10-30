@@ -1,0 +1,10 @@
+[
+  {
+    "command": "AT+BAUD=5",
+    "response": "波特率设置为460800\r\n"
+  },
+  {
+    "command": "AT+SAVE",
+    "response": "设置参数已保存，并且退出命令模式\r\n"
+  }
+]

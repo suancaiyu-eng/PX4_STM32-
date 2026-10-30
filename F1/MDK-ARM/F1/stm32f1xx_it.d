@@ -25,9 +25,13 @@ f1\stm32f1xx_it.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h
 f1\stm32f1xx_it.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h
 f1\stm32f1xx_it.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h
 f1\stm32f1xx_it.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
+f1\stm32f1xx_it.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
+f1\stm32f1xx_it.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
 f1\stm32f1xx_it.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
 f1\stm32f1xx_it.o: ../Core/Inc/stm32f1xx_it.h
 f1\stm32f1xx_it.o: ../Core/Inc/r9ds.h
 f1\stm32f1xx_it.o: ../../../firmware/rc/sbus.h
 f1\stm32f1xx_it.o: D:\Users\21144\AppData\Local\Keil_v5\ARM\Arm_Compiler_5.06u7\Bin\..\include\stdbool.h
 f1\stm32f1xx_it.o: ../Core/Inc/usart.h
+f1\stm32f1xx_it.o: ../../../firmware/common/board_link.h
+f1\stm32f1xx_it.o: ../../../firmware/common/board_link_protocol.h

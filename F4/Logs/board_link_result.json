@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "failures": [],
+  "evidence": "D:\\pixhawk2.4.8\\code_keil\\F4\\Logs\\f4_board_link_60s.json",
+  "verification": "Physical F4 USART6 <-> F1 USART2, CRC checked and request payloads matched"
+}

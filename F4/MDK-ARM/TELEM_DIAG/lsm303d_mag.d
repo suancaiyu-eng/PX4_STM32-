@@ -1,0 +1,9 @@
+telem_diag\lsm303d_mag.o: ../Core/Src/lsm303d_mag.c
+telem_diag\lsm303d_mag.o: ../Core/Inc/lsm303d_mag.h
+telem_diag\lsm303d_mag.o: D:\Users\21144\AppData\Local\Keil_v5\ARM\Arm_Compiler_5.06u7\Bin\..\include\stdbool.h
+telem_diag\lsm303d_mag.o: D:\Users\21144\AppData\Local\Keil_v5\ARM\Arm_Compiler_5.06u7\Bin\..\include\stdint.h
+telem_diag\lsm303d_mag.o: ../Core/Inc/mag_calibration_params.h
+telem_diag\lsm303d_mag.o: D:\Users\21144\AppData\Local\Keil_v5\ARM\Arm_Compiler_5.06u7\Bin\..\include\math.h
+telem_diag\lsm303d_mag.o: D:\Users\21144\AppData\Local\Keil_v5\ARM\Arm_Compiler_5.06u7\Bin\..\include\float.h
+telem_diag\lsm303d_mag.o: D:\Users\21144\AppData\Local\Keil_v5\ARM\Arm_Compiler_5.06u7\Bin\..\include\stddef.h
+telem_diag\lsm303d_mag.o: D:\Users\21144\AppData\Local\Keil_v5\ARM\Arm_Compiler_5.06u7\Bin\..\include\string.h

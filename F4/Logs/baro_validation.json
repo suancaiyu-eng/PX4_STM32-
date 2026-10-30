@@ -1,0 +1,113 @@
+{
+  "date": "2026-10-21",
+  "host_tests": 79,
+  "host_tests_passed": true,
+  "extra_native_console_modes": [
+    "legacy_text",
+    "binary",
+    "rc_only",
+    "barometer"
+  ],
+  "compiler": "Arm Compiler 5.06 update 7",
+  "builds": [
+    {
+      "target": "MPU6000",
+      "errors": 0,
+      "warnings": 0,
+      "log": "baro_selected_MPU6000_build.log",
+      "hex": "D:\\pixhawk2.4.8\\code_keil\\F4\\MDK-ARM\\MPU6000\\MPU6000.hex",
+      "sha256": "9a5dbaef493fe08b9e15141c9e5a7baf406e43b9ba415bfaeed9fef9625a109c"
+    },
+    {
+      "target": "F4_ACTUATOR_TEST",
+      "errors": 0,
+      "warnings": 0,
+      "log": "baro_selected_F4_ACTUATOR_TEST_build.log",
+      "hex": "D:\\pixhawk2.4.8\\code_keil\\F4\\MDK-ARM\\F4_ACTUATOR_TEST\\F4_ACTUATOR_TEST.hex",
+      "sha256": "5eaa900aa253ebd6fef32d800993426d20172441c2d608a122f6258472aed058"
+    },
+    {
+      "target": "F4_BARO_TEST",
+      "errors": 0,
+      "warnings": 0,
+      "log": "baro_selected_F4_BARO_TEST_build.log",
+      "hex": "D:\\pixhawk2.4.8\\code_keil\\F4\\MDK-ARM\\F4_BARO_TEST\\F4_BARO_TEST.hex",
+      "sha256": "734eda1593cb3546d8cc4ff3d38d481f9e96348bc9dc2a369a6ce92f41b4b0e7"
+    },
+    {
+      "target": "Baro_MS5611_Check",
+      "errors": 0,
+      "warnings": 0,
+      "log": "baro_ms5611_build.log",
+      "hex": "D:\\pixhawk2.4.8\\code_keil\\F4\\MDK-ARM\\Baro_MS5611_Check\\Baro_MS5611_Check.hex",
+      "sha256": "734eda1593cb3546d8cc4ff3d38d481f9e96348bc9dc2a369a6ce92f41b4b0e7"
+    },
+    {
+      "target": "Baro_MS5607_Check",
+      "errors": 0,
+      "warnings": 0,
+      "log": "baro_ms5607_build.log",
+      "hex": "D:\\pixhawk2.4.8\\code_keil\\F4\\MDK-ARM\\Baro_MS5607_Check\\Baro_MS5607_Check.hex",
+      "sha256": "a56fd859173275010d64d36bdbabb139333ef2e5959205166c8ea834dd86f3b1"
+    }
+  ],
+  "default_sensor_model": 5611,
+  "model_basis": "MS5611 pressure compensation agrees with Guilin indoor environment; not a silicon ID read",
+  "hardware_programmed": true,
+  "hardware_bench_tested": true,
+  "final_running_target": "MPU6000",
+  "final_console": "RC only; barometer runs in background",
+  "final_flash_verified_bytes": 35844,
+  "backup_sha256": "9de46027ee9d6f0bcc31026f565d15e62326ce1ead8a2623b7532b16f12d7230",
+  "hardware_evidence": "baro_hardware_validation.json",
+  "final_state_evidence": "baro_final_default_swd.json",
+  "retained_test_target": "F4_BARO_TEST",
+  "deferred_by_user": [
+    "controlled height direction/scale/precision test when untethered"
+  ],
+  "motion_capture_is_controlled": false,
+  "future_altitude_hold_work": [
+    "vertical state estimation/fusion",
+    "height controller and flight validation"
+  ],
+  "source_sha256": {
+    "Core\\Inc\\actuator_client.h": "f73267bc9d86ad20344fb0f6955d957ab4669a41fe90b94d2a67d3869ae77db8",
+    "Core\\Inc\\attitude_estimator.h": "335109e716750a726f8b9ba46e3376d32bc80d07b576788db63800025e331add",
+    "Core\\Inc\\board_link_telem.h": "d8c19f06b92bc48db2d79a046719a855b74a9cbe575625be39f2962fcfde3740",
+    "Core\\Inc\\dma.h": "7cf6f7450a29d26303cbba5a3ca8c6cb24a02635d6a5ba4d05141fdfc75c4c49",
+    "Core\\Inc\\flight_imu_app.h": "d89dca1c5c392bb73eb84e420c40c801147225ede20b346e434a078265b9d8df",
+    "Core\\Inc\\gpio.h": "e2d62f964a0b7f238384ed6a20a181d09df9647240a268dc547acf5b35099f74",
+    "Core\\Inc\\imu_telemetry.h": "8f8871c51db9a4a1d936e6dd3dc2ef6e5332a4900ba22db9bb914663bcc54203",
+    "Core\\Inc\\lsm303d_mag.h": "e5ff25c38872d1e79e4e66065258520e46322ad333f8399440af3a6aa7238a62",
+    "Core\\Inc\\mag_calibration_params.h": "a7edf80793763c7766fc4afb9266b5df4b6514177f1efc1c4dce1f61fb102510",
+    "Core\\Inc\\main.h": "0a2bfc296b09d1dd3cc693b9e889a60f1f6dae2e5aa690ec0bdfe58cd34624b0",
+    "Core\\Inc\\mpu6000.h": "117b47fd2e4af7046bbaf833f5031511e17e7098a0c1034e012e462def9403c8",
+    "Core\\Inc\\mpu6000_port.h": "aed0f3b076a418d299746ed435c9ca47890a4ec20d9ff03cc1c1a038cb1d3448",
+    "Core\\Inc\\ms56xx_baro.h": "6df5e40c62f7864126248a5881c4eb3080b726643828777bd16ed771c5998ab1",
+    "Core\\Inc\\spi.h": "7ee08a1f7b3c518b8f1a33e73ee2d18830c1336be9341e774e73f137984491d8",
+    "Core\\Inc\\stm32f4xx_hal_conf.h": "9dfcfa8b57eb2a905b84df6ed7785841e4fa9fbff8a769a88e1fed33dd8758cc",
+    "Core\\Inc\\stm32f4xx_it.h": "0feaa359cdc06247a9058a57a99fd7668bd482dae2eb4d26f24826d0320c3c84",
+    "Core\\Inc\\tim.h": "f1029af1571f326cdcb25fa8b7605171d54085a8947c09e5621bbf3e24d3a9f7",
+    "Core\\Inc\\usart.h": "62ca918ed7ea34aba39e61fd84424e04a1d938c2ae7d61e41df48ae468f10d8f",
+    "Core\\Src\\actuator_client.c": "f6d88f03605a508d4218323d790641e0d1f50ae64e418b8bf63dea1e139fceb6",
+    "Core\\Src\\attitude_estimator.c": "b1e2aa469c8e2b9fd401642ef2bbac3ed97dad10b9cd5f8b15c027c29aeafcfe",
+    "Core\\Src\\board_link_telem.c": "1a61cc09cab0749057d9698bab2c56b636f08c0a76d902eb8cd110f6db88eddd",
+    "Core\\Src\\dma.c": "d1957373e761e68c21ab4658fc5642d8c0d566e528e22858fc41dfb9033b791b",
+    "Core\\Src\\flight_imu_app.c": "2156254f81883fa0f02635df7ffa429a5254e2f21fea3724596a6f016a3a8013",
+    "Core\\Src\\gpio.c": "f75c1a04cb3fe2d77f7fb5f73f0ccdb858d54ca015c646b6b2960d9bb850cff9",
+    "Core\\Src\\imu_telemetry.c": "b9b823735e6f946cd59ed460dfbdde446071e00ae47b8ae40a3ca540ed85b41f",
+    "Core\\Src\\lsm303d_mag.c": "7cdb6c3862a208cc01405644810dd3971fe3492514c460dd59eb4c63c8cbc381",
+    "Core\\Src\\lsm303d_mag_port.c": "6934977d70d9d02d00dcdfa2f0658f8019d8f90fe6a51f934b04a850445a5da2",
+    "Core\\Src\\main.c": "4d39896523cb248227eb7b57b79c3c33b149addfcbed6bc8de4dbf6cf144b531",
+    "Core\\Src\\mpu6000.c": "8cd84338c7e84c6ee1dc87f86712b38937c4486894b387c70b81af6bf06f6703",
+    "Core\\Src\\mpu6000_port.c": "8193436fba53ff99b9306caca773538d79c7df32ed3e30a7bb80c6764d67f468",
+    "Core\\Src\\ms56xx_baro.c": "bfd00e887ef62b824d41c63f75d41ba13060f768f41b57b35b6d7ef589a5c6b4",
+    "Core\\Src\\ms56xx_baro_port.c": "70413d366d89ee23b648ba647e38c743f62ad240c1f73035aec92198c01b8913",
+    "Core\\Src\\spi.c": "45a850231fe45db0ba8fce81f7cec7a682ff5413fff3e844f2a207b7165a56ac",
+    "Core\\Src\\stm32f4xx_hal_msp.c": "3217d99dc7006dc46ac384717641fe84386f05fc71db0a3340fa0eae810bc1b7",
+    "Core\\Src\\stm32f4xx_it.c": "313f6719de19f44be46f326728ef608810707b14c66bacff940a626469e4f7b8",
+    "Core\\Src\\system_stm32f4xx.c": "d3daabaa79e49af7d46e057fb17ebe6e78d93c36daf95685c588720050a768a1",
+    "Core\\Src\\tim.c": "62d5b32a9ef85d5444a2a3ef39f9250e86d1ad2eb9e460054f4ad04f4cc3cd2c",
+    "Core\\Src\\usart.c": "62da8381f7c4c8a9b4895695905200a782aa65e448a2e86c478ea764f759b734"
+  }
+}

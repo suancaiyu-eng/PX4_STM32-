@@ -1,0 +1,30 @@
+      -------------------------------------------------------------------
+                       STM32CubeProgrammer v2.23.0                  
+      -------------------------------------------------------------------
+
+ST-LINK SN  : 35FF72063448303417211657
+ST-LINK FW  : V2J46S7
+Board       : --
+Voltage     : 3.05V
+SWD freq    : 950 KHz
+Connect mode: Hot Plug
+Reset mode  : Software reset
+Device ID   : 0x410
+Revision ID : Rev X
+Device name : STM32F101/F102/F103 Medium-density
+NVM size    : 64 KBytes
+Device type : MCU
+Device CPU  : Cortex-M3
+BL Version  : --
+
+
+UPLOADING ...
+  File          : D:\pixhawk2.4.8\code_keil\F1\Logs\r9ds_before_range_probe.bin
+  Size          : 92 Bytes
+  Address:      : 0x20000060
+Read progress:
+�������������������������������������������������� 0%
+�������������������������������������������������� 100%
+
+Data read successfully
+Time elapsed during read operation is: 00:00:00.001

@@ -1,0 +1,78 @@
+{
+  "raw_channels": [
+    994,
+    1002,
+    922,
+    998,
+    200,
+    1800,
+    1800,
+    1800,
+    1800,
+    1808
+  ],
+  "normalized": [
+    -7,
+    8,
+    -98,
+    2,
+    -1000,
+    1000,
+    0,
+    1000,
+    1000,
+    1000
+  ],
+  "expected_normalized": [
+    -7,
+    8,
+    -98,
+    2,
+    -1000,
+    1000,
+    0,
+    1000,
+    1000,
+    1000
+  ],
+  "configured_mask": "0x3bf",
+  "valid_mask": "0x3bf",
+  "normalization_verified": true,
+  "rc_status": "OK",
+  "rc_events_sent": 548,
+  "rc_event_queue_full": 0,
+  "board_link_peer_online": true,
+  "board_link_replies_matched": 109,
+  "board_link_error_counters": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "symbols": {
+    "g_r9ds": [
+      536871024,
+      100
+    ],
+    "g_r9ds_normalized": [
+      536871124,
+      24
+    ],
+    "g_board_link_status": [
+      536871548,
+      68
+    ],
+    "g_board_link_test": [
+      536872516,
+      120
+    ],
+    "g_r9ds_telem": [
+      536870932,
+      8
+    ]
+  }
+}

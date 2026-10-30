@@ -1,0 +1,54 @@
+{
+  "project": "D:\\pixhawk2.4.8\\code_keil\\F1",
+  "map": "D:\\pixhawk2.4.8\\code_keil\\F1\\MDK-ARM\\F1\\F1.map",
+  "symbols": {
+    "g_board_link_status": [
+      536871492,
+      68
+    ],
+    "g_board_link_test": [
+      536872460,
+      120
+    ]
+  },
+  "snapshots": [
+    {
+      "elapsed_seconds": 0.187,
+      "g_board_link_status": {
+        "magic": 1112297035,
+        "node": 1,
+        "uptime_ms": 463046,
+        "tx_packets": 309,
+        "tx_bytes": 11433,
+        "rx_packets": 0,
+        "rx_bytes": 0,
+        "crc_errors": 0,
+        "header_errors": 0,
+        "uart_errors": 0,
+        "rx_overflows": 0,
+        "tx_full": 0,
+        "queue_drops": 0,
+        "wrong_address": 0,
+        "partial_timeouts": 0,
+        "last_rx_ms": 0,
+        "discarded_bytes": 0
+      },
+      "g_board_link_test": {
+        "magic": 1413829460,
+        "node": 1,
+        "tests_sent": 309,
+        "replies_matched": 0,
+        "requests_answered": 0,
+        "reply_timeouts": 308,
+        "bad_replies": 0,
+        "unknown_commands": 0,
+        "last_round_trip_ms": 0,
+        "last_reply_ms": 0,
+        "peer_online": 0,
+        "last_sequence": 0,
+        "peer_node": 0,
+        "last_peer_length": 0
+      }
+    }
+  ]
+}

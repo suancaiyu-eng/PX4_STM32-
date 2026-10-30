@@ -33,6 +33,14 @@
 "mpu6000\attitude_estimator.o"
 "mpu6000\lsm303d_mag.o"
 "mpu6000\lsm303d_mag_port.o"
+"mpu6000\board_link_telem.o"
+"mpu6000\actuator_client.o"
+"mpu6000\ms56xx_baro.o"
+"mpu6000\ms56xx_baro_port.o"
+"mpu6000\board_link_protocol.o"
+"mpu6000\board_link.o"
+"mpu6000\board_link_app.o"
+"mpu6000\actuator_protocol.o"
 --strict --scatter ".\MPU6000.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

@@ -1,0 +1,9 @@
+f4_actuator_test\lsm303d_mag.o: ../Core/Src/lsm303d_mag.c
+f4_actuator_test\lsm303d_mag.o: ../Core/Inc/lsm303d_mag.h
+f4_actuator_test\lsm303d_mag.o: D:\Users\21144\AppData\Local\Keil_v5\ARM\Arm_Compiler_5.06u7\Bin\..\include\stdbool.h
+f4_actuator_test\lsm303d_mag.o: D:\Users\21144\AppData\Local\Keil_v5\ARM\Arm_Compiler_5.06u7\Bin\..\include\stdint.h
+f4_actuator_test\lsm303d_mag.o: ../Core/Inc/mag_calibration_params.h
+f4_actuator_test\lsm303d_mag.o: D:\Users\21144\AppData\Local\Keil_v5\ARM\Arm_Compiler_5.06u7\Bin\..\include\math.h
+f4_actuator_test\lsm303d_mag.o: D:\Users\21144\AppData\Local\Keil_v5\ARM\Arm_Compiler_5.06u7\Bin\..\include\float.h
+f4_actuator_test\lsm303d_mag.o: D:\Users\21144\AppData\Local\Keil_v5\ARM\Arm_Compiler_5.06u7\Bin\..\include\stddef.h
+f4_actuator_test\lsm303d_mag.o: D:\Users\21144\AppData\Local\Keil_v5\ARM\Arm_Compiler_5.06u7\Bin\..\include\string.h

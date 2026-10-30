@@ -4,7 +4,7 @@
 #include "spi.h"
 #include "tim.h"
 #include "usart.h"
-#if IMU_TELEMETRY_OUTPUT_FORMAT == IMU_TELEMETRY_FORMAT_FIREWATER
+#if BARO_TELEMETRY_ENABLED || (IMU_TELEMETRY_OUTPUT_FORMAT == IMU_TELEMETRY_FORMAT_FIREWATER && !IMU_TELEMETRY_RC_ONLY)
 #include <stdio.h>
 #endif
 
@@ -21,6 +21,33 @@ volatile uint32_t g_attitude_max_update_us;
 volatile MagStatus g_mag_status;
 volatile MagSample g_mag_sample;
 volatile SensorSpiBusStats g_spi_bus_status;
+volatile BaroStatus g_baro_status;
+volatile BaroSample g_baro_sample;
+volatile uint32_t g_baro_pressure_valid, g_baro_altitude_valid;
+#if BARO_TELEMETRY_ENABLED && IMU_TELEMETRY_OUTPUT_FORMAT != IMU_TELEMETRY_FORMAT_SEEKFREE
+static uint32_t baro_telemetry_us;
+static void baro_telemetry(uint32_t now, const BaroSample *sample, const BaroStatus *status)
+{
+    char line[240];
+    int length;
+    if((uint32_t)(now-baro_telemetry_us) < 50000U) { return; }
+    baro_telemetry_us=now;
+    /* One fixed channel set, integer units. Unknown model exposes BOTH
+     * hypotheses but pressure/height valid stay zero. Existing DMA owns UART. */
+    length=snprintf(line,sizeof(line),
+        "baro:%ld,%ld,%ld,%ld,%ld,%ld,%lu,%lu,%lu,%lu,%lu,%lu,%lu,%lu\n",
+        (long)sample->pressure_ms5611_pa,(long)sample->pressure_ms5607_pa,
+        (long)sample->pressure_pa,(long)sample->temperature_centi_c,
+        (long)(sample->relative_altitude_m*1000.0f),(long)(sample->filtered_altitude_m*1000.0f),
+        (unsigned long)sample->flags,(unsigned long)status->model,
+        (unsigned long)status->state,(unsigned long)status->error,
+        (unsigned long)sample->sequence,(unsigned long)(now-sample->timestamp_us),
+        (unsigned long)status->reference_samples,(unsigned long)status->crc_actual);
+    if(length > 0 && (size_t)length < sizeof(line)) {
+        (void)ImuTelemetry_QueueText(line,(uint16_t)length);
+    }
+}
+#endif
 static MPU6000_Sample latest;
 static bool have_sample;
 
@@ -28,7 +55,7 @@ void FlightImuApp_Init(void)
 {
     uint32_t now;
     AttitudeEstimate initial_attitude;
-#if IMU_TELEMETRY_OUTPUT_FORMAT == IMU_TELEMETRY_FORMAT_FIREWATER
+#if IMU_TELEMETRY_OUTPUT_FORMAT == IMU_TELEMETRY_FORMAT_FIREWATER && !IMU_TELEMETRY_RC_ONLY
 #if FLIGHT_IMU_FIREWATER_ATTITUDE
     static const uint8_t boot_line[] = "#BOOT MPU6000 FW8 USART2=460800 FireWater18 AHRS9\r\n";
 #else
@@ -49,7 +76,11 @@ void FlightImuApp_Init(void)
         HAL_TIM_Base_Start(&htim2) != HAL_OK) {
         Error_Handler();
     }
-#if IMU_TELEMETRY_OUTPUT_FORMAT == IMU_TELEMETRY_FORMAT_FIREWATER
+#if IMU_TELEMETRY_RC_ONLY
+    /* Preserve sensor-rail settling even with boot diagnostics disabled. */
+    HAL_Delay(100U);
+#endif
+#if IMU_TELEMETRY_OUTPUT_FORMAT == IMU_TELEMETRY_FORMAT_FIREWATER && !IMU_TELEMETRY_RC_ONLY
     /* Boot diagnostic only: no estimator/control task or DMA owns SPI/UART yet.
      * Preserve the enabled rail and allow settling before any identity read. */
     HAL_Delay(100U);
@@ -69,6 +100,11 @@ void FlightImuApp_Init(void)
 #endif
     now = MPU6000_Port_NowUs();
     Mag_Init(now);
+    Baro_Init(now);
+    g_baro_pressure_valid=g_baro_altitude_valid=0U;
+#if BARO_TELEMETRY_ENABLED && IMU_TELEMETRY_OUTPUT_FORMAT != IMU_TELEMETRY_FORMAT_SEEKFREE
+    baro_telemetry_us=now;
+#endif
     have_sample = false;
     g_imu_sample_valid = 0U;
     g_attitude_max_update_us = 0U;
@@ -90,6 +126,8 @@ void FlightImuApp_Service(void)
     MagStatus mag_status;
     MagSample mag_sample;
     SensorSpiBusStats bus_status;
+    BaroSample baro_sample;
+    BaroStatus baro_status;
     uint32_t now, i;
     bool valid;
 
@@ -130,6 +168,18 @@ void FlightImuApp_Service(void)
             (uint32_t)(now - latest.timestamp_us) <= 5000U;
     g_imu_sample_valid = valid ? 1U : 0U;
     g_imu_status = status;
+    /* Service after draining IMU queue; bounded SPI accesses use the same
+     * foreground lease as the magnetometer. ADC conversion waits release bus. */
+    Baro_Service(now,status.state == MPU6000_RUNNING);
+    now=MPU6000_Port_NowUs();
+    (void)Baro_GetLatest(now,&baro_sample);
+    Baro_GetStatus(&baro_status);
+    g_baro_sample=baro_sample; g_baro_status=baro_status;
+    g_baro_pressure_valid=(baro_sample.flags & BARO_PRESSURE_VALID) ? 1U : 0U;
+    g_baro_altitude_valid=(baro_sample.flags & BARO_ALTITUDE_VALID) ? 1U : 0U;
+#if BARO_TELEMETRY_ENABLED && IMU_TELEMETRY_OUTPUT_FORMAT != IMU_TELEMETRY_FORMAT_SEEKFREE
+    baro_telemetry(now,&baro_sample,&baro_status);
+#endif
     AttitudeEstimator_Service(now, valid);
     AttitudeEstimator_GetEstimate(&attitude);
     g_attitude = attitude;
@@ -166,6 +216,14 @@ void FlightImuApp_Service(void)
     record.mag_healthy=(mag_status.state == 2U && mag_status.sample_valid && mag_status.samples != 0U &&
         (uint32_t)(now-mag_status.last_sample_us) <= 50000U) ? 1U : 0U;
     record.mag_calibrated=mag_status.calibration_valid;
+    record.baro_pressure_pa=baro_sample.pressure_pa;
+    record.baro_temperature_centi_c=baro_sample.temperature_centi_c;
+    record.baro_relative_mm=(int32_t)(baro_sample.relative_altitude_m*1000.0f);
+    record.baro_filtered_mm=(int32_t)(baro_sample.filtered_altitude_m*1000.0f);
+    record.baro_flags=baro_sample.flags;
+    record.baro_model=baro_status.model;
+    record.baro_state=baro_status.state;
+    record.baro_error=baro_status.error;
     record.heading_valid=(attitude.flags & ATTITUDE_HEADING_VALID) != 0U ? 1U : 0U;
     record.mag_used=(attitude.flags & ATTITUDE_MAG_USED) != 0U ? 1U : 0U;
     if(record.mag_healthy) {

@@ -1,0 +1,68 @@
+      -------------------------------------------------------------------
+                       STM32CubeProgrammer v2.23.0                  
+      -------------------------------------------------------------------
+
+ST-LINK SN  : 35FF72063448303417211657
+ST-LINK FW  : V2J46S7
+Board       : --
+Voltage     : 3.04V
+SWD freq    : 950 KHz
+Connect mode: Normal
+Reset mode  : Software reset
+Device ID   : 0x419
+Revision ID : Rev 3
+Device name : STM32F42xxx/F43xxx
+NVM size    : 2 MBytes
+Device type : MCU
+Device CPU  : Cortex-M4
+BL Version  : 0x91
+
+
+
+Opening and parsing file: F4_BARO_TEST.hex
+
+
+Memory Programming ...
+  File          : F4_BARO_TEST.hex
+  Size          : 34.88 KB 
+  Address       : 0x08000000
+
+
+Erasing memory corresponding to segment 0:
+Erasing internal memory sectors [0 2]
+Download in Progress:
+�������������������������������������������������� 0%
+�������������������������������������������������� 100%
+
+File download complete
+Time elapsed during download operation: 00:00:01.599
+
+
+
+Verifying...
+
+
+Read progress:
+�������������������������������������������������� 50%
+�������������������������������������������������� 100%
+
+Time elapsed during verifying operation: 00:00:00.550
+
+
+Download verified successfully
+
+
+
+MCU Reset
+
+Software reset is performed
+Core run
+baro:99846,199693,0,3182,0,0,1,0,2,0,7388,355,0,0
+baro:99843,199687,0,3182,0,0,1,0,2,0,7390,8582,0,0
+baro:0,0,0,0,0,0,0,5611,0,0,0,150966,0,0
+baro:0,0,0,0,0,0,0,5611,0,0,0,201070,0,0
+baro:99851,199703,99851,3193,-708,-528,7,5611,2,0,2859,456,100,0
+baro:99847,199695,99847,3193,-369,-510,7,5611,2,0,2861,8680,100,0
+baro:99850,199700,99850,3193,-623,-518,7,5611,2,0,2863,17587,100,0
+
+Bytes=77388 Lines=1201

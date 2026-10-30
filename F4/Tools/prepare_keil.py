@@ -4,6 +4,7 @@ Run from any directory: python Tools/prepare_keil.py
 Does not change programmer/debugger settings or download anything.
 """
 from pathlib import Path
+import copy
 import re
 import xml.etree.ElementTree as ET
 
@@ -35,6 +36,11 @@ def prepare():
     definitions = [s for s in define.text.split(",") if not s.startswith("HSE_VALUE=")]
     define.text = ",".join(definitions + ["HSE_VALUE=24000000U"])
     arm.find("./Cads/uC99").text = "1"
+    includes = arm.find("./Cads/VariousControls/IncludePath")
+    paths = includes.text.split(";")
+    if "../../../firmware/common" not in paths:
+        paths.append("../../../firmware/common")
+    includes.text = ";".join(paths)
     memories = arm.find("./ArmAdsMisc/OnChipMemories")
     for name, address, size in [("IROM", "0x08000000", "0x00200000"),
                                 ("OCR_RVCT4", "0x08000000", "0x00200000"),
@@ -54,12 +60,50 @@ def prepare():
     files = group.find("Files")
     all_paths = {n.text.replace("\\", "/") for n in target.findall("./Groups/Group/Files/File/FilePath")}
     for name in ("mpu6000.c", "mpu6000_port.c", "imu_telemetry.c", "flight_imu_app.c", "attitude_estimator.c",
-                 "lsm303d_mag.c", "lsm303d_mag_port.c"):
+                 "lsm303d_mag.c", "lsm303d_mag_port.c", "ms56xx_baro.c", "ms56xx_baro_port.c",
+                 "board_link_telem.c", "actuator_client.c"):
         path = "../Core/Src/" + name
         if path not in all_paths:
             file = ET.SubElement(files, "File")
             for key, value in {"FileName": name, "FileType": "1", "FilePath": path}.items():
                 ET.SubElement(file, key).text = value
+    group = next((g for g in groups if g.findtext("GroupName") == "Application/BoardLink"), None)
+    if group is None:
+        group = ET.SubElement(groups, "Group")
+        ET.SubElement(group, "GroupName").text = "Application/BoardLink"
+        ET.SubElement(group, "Files")
+    for name in ("board_link_protocol.c", "board_link.c", "board_link_app.c", "actuator_protocol.c"):
+        path = "../../../firmware/common/" + name
+        if path not in all_paths:
+            file = ET.SubElement(group.find("Files"), "File")
+            for key, value in {"FileName": name, "FileType": "1", "FilePath": path}.items():
+                ET.SubElement(file, key).text = value
+    # Separate output trees prevent test-mailbox objects leaking into default.
+    define.text = ",".join(x for x in define.text.split(",")
+                           if not x.strip().startswith("ACTUATOR_CLIENT_TEST_ENABLED"))
+    targets = tree.find("Targets")
+    for old in list(targets):
+        if old.findtext("TargetName") == "F4_ACTUATOR_TEST": targets.remove(old)
+    test_target = copy.deepcopy(target)
+    test_target.find("TargetName").text = "F4_ACTUATOR_TEST"
+    test_common = test_target.find("./TargetOption/TargetCommonOption")
+    set_value(test_common, "OutputDirectory", "F4_ACTUATOR_TEST\\")
+    set_value(test_common, "OutputName", "F4_ACTUATOR_TEST")
+    set_value(test_common, "ListingPath", "./F4_ACTUATOR_TEST/")
+    test_define = test_target.find("./TargetOption/TargetArmAds/Cads/VariousControls/Define")
+    test_define.text = define.text + ",ACTUATOR_CLIENT_TEST_ENABLED=1"
+    targets.append(test_target)
+    for old in list(targets):
+        if old.findtext("TargetName") == "F4_BARO_TEST": targets.remove(old)
+    baro_target = copy.deepcopy(target)
+    baro_target.find("TargetName").text = "F4_BARO_TEST"
+    baro_common = baro_target.find("./TargetOption/TargetCommonOption")
+    set_value(baro_common, "OutputDirectory", "F4_BARO_TEST\\")
+    set_value(baro_common, "OutputName", "F4_BARO_TEST")
+    set_value(baro_common, "ListingPath", "./F4_BARO_TEST/")
+    baro_define = baro_target.find("./TargetOption/TargetArmAds/Cads/VariousControls/Define")
+    baro_define.text = define.text + ",BARO_TELEMETRY_ENABLED=1"
+    targets.append(baro_target)
     ET.indent(tree, space="  ")
     tree.write(PROJECT, encoding="utf-8", xml_declaration=True)
 

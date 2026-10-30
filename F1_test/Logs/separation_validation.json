@@ -1,0 +1,48 @@
+{
+  "date": "2026-10-20T15:52:39.697059+08:00",
+  "separation": {
+    "production_single_target": true,
+    "production_no_test_hooks": true,
+    "lab_all_sources_and_includes_local": true,
+    "port_and_timer_snapshots_match": true,
+    "relocated_lab_builds": [
+      {
+        "target": "F1_PWM_SWEEP",
+        "errors": 0,
+        "warnings": 0,
+        "sha256": "aaaf8d197f5d391bac62a1db340dad12a30ddf09492056b204ff9cde9f11eb69"
+      },
+      {
+        "target": "F1_PWM_TEST",
+        "errors": 0,
+        "warnings": 0,
+        "sha256": "02347a61f899f0ec0d87ac9e60a674292ef20e31d7dc700bca81e1d220c49cc5"
+      }
+    ],
+    "relocated_without_production_sources": true
+  },
+  "builds": [
+    {
+      "board": "F1_test",
+      "target": "F1_PWM_SWEEP",
+      "errors": 0,
+      "warnings": 0,
+      "hex": "D:\\pixhawk2.4.8\\code_keil\\F1_test\\MDK-ARM\\F1_PWM_SWEEP\\F1_PWM_SWEEP.hex",
+      "sha256": "aaaf8d197f5d391bac62a1db340dad12a30ddf09492056b204ff9cde9f11eb69",
+      "flash_bytes": 5028,
+      "ram_bytes": 1920,
+      "log": "D:\\pixhawk2.4.8\\code_keil\\F1_test\\MDK-ARM\\actuator_F1_PWM_SWEEP_build.log"
+    },
+    {
+      "board": "F1_test",
+      "target": "F1_PWM_TEST",
+      "errors": 0,
+      "warnings": 0,
+      "hex": "D:\\pixhawk2.4.8\\code_keil\\F1_test\\MDK-ARM\\F1_PWM_TEST\\F1_PWM_TEST.hex",
+      "sha256": "02347a61f899f0ec0d87ac9e60a674292ef20e31d7dc700bca81e1d220c49cc5",
+      "flash_bytes": 5472,
+      "ram_bytes": 1944,
+      "log": "D:\\pixhawk2.4.8\\code_keil\\F1_test\\MDK-ARM\\actuator_F1_PWM_TEST_build.log"
+    }
+  ]
+}

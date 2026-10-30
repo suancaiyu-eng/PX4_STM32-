@@ -1,0 +1,14 @@
+{
+  "port": "COM5",
+  "baud": 460800,
+  "capture_seconds": 10,
+  "bytes": 100230,
+  "validated_link_lines": 80,
+  "requests": 40,
+  "responses": 40,
+  "sequence_gaps": 0,
+  "payload_errors": 0,
+  "complete_imu_lines": 1000,
+  "imu_channels": 18,
+  "port_released": true
+}

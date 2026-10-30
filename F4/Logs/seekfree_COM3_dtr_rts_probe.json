@@ -1,0 +1,7 @@
+{
+  "port": "COM3",
+  "dtr": true,
+  "rts": true,
+  "bytes": 0,
+  "text": ""
+}

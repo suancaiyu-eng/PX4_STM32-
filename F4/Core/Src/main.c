@@ -27,6 +27,9 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "flight_imu_app.h"
+#include "board_link_app.h"
+#include "board_link_telem.h"
+#include "actuator_client.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -58,6 +61,11 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+static void FlightLink_OnMessage(const bl_message_t *message)
+{
+  ActuatorClient_OnMessage(message);
+  BoardLinkTelem_OnMessage(message);
+}
 
 /* USER CODE END 0 */
 
@@ -94,9 +102,17 @@ int main(void)
   MX_SPI1_Init();
   MX_USART2_UART_Init();
   MX_TIM2_Init();
+  MX_USART6_UART_Init();
   /* USER CODE BEGIN 2 */
   g_app_boot_stage = 4U;
+  /* Sensor startup includes a 100 ms rail wait. Arm the link RX ring only
+     afterwards so concurrent 20 Hz RC + actuator status cannot overflow it. */
   FlightImuApp_Init();
+  BoardLink_Init(&huart6, BL_NODE_F4);
+  BoardLinkApp_Init();
+  BoardLinkTelem_Init();
+  ActuatorClient_Init();
+  BoardLinkApp_SetMessageHandler(FlightLink_OnMessage);
   g_app_boot_stage = 5U;
   /* USER CODE END 2 */
 
@@ -109,6 +125,8 @@ int main(void)
     /* USER CODE BEGIN 3 */
     g_app_boot_stage = 6U;
     FlightImuApp_Service();
+    BoardLinkApp_Service();
+    ActuatorClient_Service();
   }
   /* USER CODE END 3 */
 }

@@ -1,0 +1,10 @@
+telem_diag\attitude_estimator.o: ../Core/Src/attitude_estimator.c
+telem_diag\attitude_estimator.o: ../Core/Inc/attitude_estimator.h
+telem_diag\attitude_estimator.o: ../Core/Inc/mpu6000.h
+telem_diag\attitude_estimator.o: D:\Users\21144\AppData\Local\Keil_v5\ARM\Arm_Compiler_5.06u7\Bin\..\include\stdbool.h
+telem_diag\attitude_estimator.o: D:\Users\21144\AppData\Local\Keil_v5\ARM\Arm_Compiler_5.06u7\Bin\..\include\stdint.h
+telem_diag\attitude_estimator.o: ../Core/Inc/lsm303d_mag.h
+telem_diag\attitude_estimator.o: D:\Users\21144\AppData\Local\Keil_v5\ARM\Arm_Compiler_5.06u7\Bin\..\include\float.h
+telem_diag\attitude_estimator.o: D:\Users\21144\AppData\Local\Keil_v5\ARM\Arm_Compiler_5.06u7\Bin\..\include\math.h
+telem_diag\attitude_estimator.o: D:\Users\21144\AppData\Local\Keil_v5\ARM\Arm_Compiler_5.06u7\Bin\..\include\stddef.h
+telem_diag\attitude_estimator.o: D:\Users\21144\AppData\Local\Keil_v5\ARM\Arm_Compiler_5.06u7\Bin\..\include\string.h

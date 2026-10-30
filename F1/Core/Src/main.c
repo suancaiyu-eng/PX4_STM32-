@@ -24,6 +24,12 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "r9ds.h"
+#include "board_link_app.h"
+#include "r9ds_telem.h"
+#include "r9ds_calibration.h"
+#include "main_pwm.h"
+#include "actuator_io.h"
+#include "io_boot_id.h"
 
 /* USER CODE END Includes */
 
@@ -47,6 +53,8 @@
 /* USER CODE BEGIN PV */
 /* Keil Watch: CH1..CH10 are g_r9ds.channel[0..9]. */
 r9ds_snapshot_t g_r9ds;
+r9ds_normalized_t g_r9ds_normalized;
+uint32_t g_io_boot_id;
 
 /* USER CODE END PV */
 
@@ -85,16 +93,24 @@ int main(void)
   SystemClock_Config();
 
   /* USER CODE BEGIN SysInit */
-
+  /* The PWM port owns timer init and keeps MAIN2..5 low until explicit submit. */
+  if (!MainPwm_Init(HAL_GetTick())) { Error_Handler(); }
+  /* Failure keeps remote output unavailable; RC/diagnostics may still run. */
+  (void)IoBootId_Next(&g_io_boot_id);
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_USART3_UART_Init();
+  MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
   /* An initial receive-start failure is retried by R9DS_Process(). */
   (void)R9DS_Init();
   (void)R9DS_GetSnapshot(&g_r9ds);
+  BoardLink_Init(&huart2, BL_NODE_F1);
+  BoardLinkApp_Init();
+  ActuatorIo_Init(g_io_boot_id, true);
+  R9DS_Telem_Init();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -104,8 +120,13 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+    MainPwm_Service(HAL_GetTick());
+    ActuatorIo_Service();
     R9DS_Process();
     (void)R9DS_GetSnapshot(&g_r9ds);
+    BoardLinkApp_Service();
+    R9DS_Telem_Service();
+    R9DS_Normalize(g_r9ds.channel, g_r9ds.input_valid, &g_r9ds_normalized);
   }
   /* USER CODE END 3 */
 }

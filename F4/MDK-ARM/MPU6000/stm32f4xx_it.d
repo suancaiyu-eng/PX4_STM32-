@@ -33,5 +33,8 @@ mpu6000\stm32f4xx_it.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
 mpu6000\stm32f4xx_it.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 mpu6000\stm32f4xx_it.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 mpu6000\stm32f4xx_it.o: ../Core/Inc/stm32f4xx_it.h
-mpu6000\stm32f4xx_it.o: ../Core/Inc/mpu6000_port.h
+mpu6000\stm32f4xx_it.o: ../../../firmware/common/board_link.h
+mpu6000\stm32f4xx_it.o: ../../../firmware/common/board_link_protocol.h
 mpu6000\stm32f4xx_it.o: D:\Users\21144\AppData\Local\Keil_v5\ARM\Arm_Compiler_5.06u7\Bin\..\include\stdbool.h
+mpu6000\stm32f4xx_it.o: ../Core/Inc/usart.h
+mpu6000\stm32f4xx_it.o: ../Core/Inc/mpu6000_port.h

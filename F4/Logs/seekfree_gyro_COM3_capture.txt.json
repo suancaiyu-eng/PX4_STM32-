@@ -1,0 +1,10 @@
+{
+  "bytes": 900,
+  "accuracy_calibration": false,
+  "method": "Continuous receive only; no synchronized movement events or height reference",
+  "elapsed_seconds": 5.0161051,
+  "capture_start_utc": "2026-10-21T14:34:01.6013283Z",
+  "capture_end_utc": "2026-10-21T14:34:06.6257472Z",
+  "port": "COM3",
+  "serial_open_utc": "2026-10-21T14:34:01.5945094Z"
+}

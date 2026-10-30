@@ -1,0 +1,54 @@
+{
+  "project": "D:\\pixhawk2.4.8\\code_keil\\F4",
+  "map": "D:\\pixhawk2.4.8\\code_keil\\F4\\MDK-ARM\\MPU6000\\MPU6000.map",
+  "symbols": {
+    "g_board_link_status": [
+      536873552,
+      68
+    ],
+    "g_board_link_test": [
+      536874520,
+      120
+    ]
+  },
+  "snapshots": [
+    {
+      "elapsed_seconds": 0.235,
+      "g_board_link_status": {
+        "magic": 1112297035,
+        "node": 4,
+        "uptime_ms": 3218,
+        "tx_packets": 22,
+        "tx_bytes": 814,
+        "rx_packets": 22,
+        "rx_bytes": 814,
+        "crc_errors": 0,
+        "header_errors": 0,
+        "uart_errors": 0,
+        "rx_overflows": 0,
+        "tx_full": 0,
+        "queue_drops": 0,
+        "wrong_address": 0,
+        "partial_timeouts": 0,
+        "last_rx_ms": 3159,
+        "discarded_bytes": 0
+      },
+      "g_board_link_test": {
+        "magic": 1413829460,
+        "node": 4,
+        "tests_sent": 12,
+        "replies_matched": 12,
+        "requests_answered": 10,
+        "reply_timeouts": 0,
+        "bad_replies": 0,
+        "unknown_commands": 0,
+        "last_round_trip_ms": 6,
+        "last_reply_ms": 3006,
+        "peer_online": 1,
+        "last_sequence": 12,
+        "peer_node": 1,
+        "last_peer_length": 23
+      }
+    }
+  ]
+}

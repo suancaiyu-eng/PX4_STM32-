@@ -1,0 +1,9 @@
+Open On-Chip Debugger 0.12.0+dev-00664-g72f14cee6 (2026-04-16-14:04) [https://github.com/STMicroelectronics/OpenOCD]
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.org/doc/doxygen/bugs.html
+swd
+adapter speed: 1000 kHz
+Info : Using CMSIS-DAPv2 interface with VID:PID=0xfaed:0x4870, serial=446084651353
+Error: CMSIS-DAP command CMD_INFO failed.
+

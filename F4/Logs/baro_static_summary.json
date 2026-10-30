@@ -1,0 +1,21 @@
+{
+  "total_rows": 1198,
+  "valid_height_rows": 1126,
+  "baro_hz": 48.21599410797327,
+  "imu_hz": 1001.4292655845402,
+  "pressure_pa_range": [
+    99839,
+    99853
+  ],
+  "filtered_height_m_range": [
+    -0.633,
+    0.126
+  ],
+  "filtered_height_std_m": 0.17504843780190119,
+  "drift_first_last_5s_m": -0.41954,
+  "max_age_us": 21337,
+  "temperature_c_range": [
+    31.81,
+    31.94
+  ]
+}

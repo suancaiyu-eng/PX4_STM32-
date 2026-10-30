@@ -5,6 +5,7 @@
 #include "imu_telemetry.h"
 #include "mpu6000_port.h"
 #include "attitude_estimator.h"
+#include "ms56xx_baro.h"
 
 /* Set 0 to restore exactly the original seven FireWater raw channels.
  * The estimator still runs; binary v1 is unchanged in either setting. */
@@ -29,6 +30,9 @@ extern volatile uint32_t g_attitude_max_update_us;
 extern volatile MagStatus g_mag_status;
 extern volatile MagSample g_mag_sample;
 extern volatile SensorSpiBusStats g_spi_bus_status;
+extern volatile BaroStatus g_baro_status;
+extern volatile BaroSample g_baro_sample;
+extern volatile uint32_t g_baro_pressure_valid, g_baro_altitude_valid;
 
 void FlightImuApp_Init(void);
 void FlightImuApp_Service(void);

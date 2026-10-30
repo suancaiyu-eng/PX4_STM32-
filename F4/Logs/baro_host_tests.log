@@ -1,0 +1,88 @@
+PASS: real TELEM1 formatter, maximum payload, safe text, async DMA ownership, queue overflow and timeout recovery
+PASS: binary telemetry rejects auxiliary text and retains 64-byte packets
+PASS: RC-only silence, PING filtering, real RC decoding, failsafe/age validity, validation and DMA ownership
+PASS: barometer console uses shared DMA and suppresses RC channel mixing
+test_acceleration_and_freefall_do_not_create_tilt (test_attitude_estimator.AttitudeTests.test_acceleration_and_freefall_do_not_create_tilt) ... ok
+test_arbitrary_initial_tilt (test_attitude_estimator.AttitudeTests.test_arbitrary_initial_tilt) ... ok
+test_coupled_rotation_and_timestamp_jitter (test_attitude_estimator.AttitudeTests.test_coupled_rotation_and_timestamp_jitter) ... ok
+test_every_gyro_sample_is_integrated (test_attitude_estimator.AttitudeTests.test_every_gyro_sample_is_integrated) ... ok
+test_frame_mapping_and_in_place (test_attitude_estimator.AttitudeTests.test_frame_mapping_and_in_place) ... ok
+test_gaps_and_duplicate_samples_latch_fault (test_attitude_estimator.AttitudeTests.test_gaps_and_duplicate_samples_latch_fault) ... ok
+test_gravity_feedback_corrects_roll_disturbance (test_attitude_estimator.AttitudeTests.test_gravity_feedback_corrects_roll_disturbance) ... ok
+test_known_single_axis_rotations (test_attitude_estimator.AttitudeTests.test_known_single_axis_rotations) ... ok
+test_magnetic_constraint_and_online_bias_stop_unbounded_yaw_drift (test_attitude_estimator.AttitudeTests.test_magnetic_constraint_and_online_bias_stop_unbounded_yaw_drift) ... ok
+test_magnetic_disturbance_rejected_without_tilting_or_learning (test_attitude_estimator.AttitudeTests.test_magnetic_disturbance_rejected_without_tilting_or_learning) ... ok
+test_magnetic_initial_heading_and_tilt_compensation (test_attitude_estimator.AttitudeTests.test_magnetic_initial_heading_and_tilt_compensation) ... ok
+test_magnetic_stale_and_reacquisition (test_attitude_estimator.AttitudeTests.test_magnetic_stale_and_reacquisition) ... ok
+test_movement_restarts_startup_window (test_attitude_estimator.AttitudeTests.test_movement_restarts_startup_window) ... ok
+test_nonfinite_saturation_and_null_input (test_attitude_estimator.AttitudeTests.test_nonfinite_saturation_and_null_input) ... ok
+test_publication_phase_with_realistic_fast_sensor_clock (test_attitude_estimator.AttitudeTests.test_publication_phase_with_realistic_fast_sensor_clock) ... ok
+test_relative_yaw_is_not_artificially_corrected (test_attitude_estimator.AttitudeTests.test_relative_yaw_is_not_artificially_corrected) ... ok
+test_stale_or_faulted_sensor_invalidates_attitude (test_attitude_estimator.AttitudeTests.test_stale_or_faulted_sensor_invalidates_attitude) ... ok
+test_startup_bias_and_static_stability (test_attitude_estimator.AttitudeTests.test_startup_bias_and_static_stability) ... ok
+test_timestamp_and_sequence_wrap (test_attitude_estimator.AttitudeTests.test_timestamp_and_sequence_wrap) ... ok
+test_timing_mismatch_and_long_interval (test_attitude_estimator.AttitudeTests.test_timing_mismatch_and_long_interval) ... ok
+test_uncalibrated_magnetic_aiding_is_not_validated_heading (test_attitude_estimator.AttitudeTests.test_uncalibrated_magnetic_aiding_is_not_validated_heading) ... ok
+test_variable_slow_motion_fails_variance_gate (test_attitude_estimator.AttitudeTests.test_variable_slow_motion_fails_variance_gate) ... ok
+test_vertical_field_and_repeated_observation_cannot_align_heading (test_attitude_estimator.AttitudeTests.test_vertical_field_and_repeated_observation_cannot_align_heading) ... ok
+test_dma_ownership_timeout_and_wire_encoding (test_imu_monitor.NativeTelemetryTests.test_dma_ownership_timeout_and_wire_encoding) ... ok
+test_firewater_raw_channels_dma_and_fault_gating (test_imu_monitor.NativeTelemetryTests.test_firewater_raw_channels_dma_and_fault_gating) ... ok
+test_corrupt_crc_and_header_resynchronize (test_imu_monitor.ProtocolTests.test_corrupt_crc_and_header_resynchronize) ... ok
+test_decode_and_scale (test_imu_monitor.ProtocolTests.test_decode_and_scale) ... ok
+test_every_split_position (test_imu_monitor.ProtocolTests.test_every_split_position) ... ok
+test_junk_and_sync_split (test_imu_monitor.ProtocolTests.test_junk_and_sync_split) ... ok
+test_known_crc_vector (test_imu_monitor.ProtocolTests.test_known_crc_vector) ... ok
+test_offline_cli_csv (test_imu_monitor.ProtocolTests.test_offline_cli_csv) ... ok
+test_reject_input_overwrite (test_imu_monitor.ProtocolTests.test_reject_input_overwrite) ... ok
+test_sample_age_wrap_and_invalid_flags (test_imu_monitor.ProtocolTests.test_sample_age_wrap_and_invalid_flags) ... ok
+test_truncated_frame_does_not_swallow_next_frame (test_imu_monitor.ProtocolTests.test_truncated_frame_does_not_swallow_next_frame) ... ok
+test_wraparound_and_random_chunks (test_imu_monitor.ProtocolTests.test_wraparound_and_random_chunks) ... ok
+test_actual_board_parameter_header_passes_native_crc_gate (test_lsm303d_mag.MagTests.test_actual_board_parameter_header_passes_native_crc_gate) ... ok
+test_busy_and_not_ready_do_not_create_samples (test_lsm303d_mag.MagTests.test_busy_and_not_ready_do_not_create_samples) ... ok
+test_crc_validated_calibration_and_fail_closed_fallback (test_lsm303d_mag.MagTests.test_crc_validated_calibration_and_fail_closed_fallback) ... ok
+test_exact_identity_and_register_configuration (test_lsm303d_mag.MagTests.test_exact_identity_and_register_configuration) ... ok
+test_missing_data_and_runtime_configuration_loss (test_lsm303d_mag.MagTests.test_missing_data_and_runtime_configuration_loss) ... ok
+test_readback_and_bus_errors_latch (test_lsm303d_mag.MagTests.test_readback_and_bus_errors_latch) ... ok
+test_saturation_has_no_valid_flag_and_recovers_on_new_data (test_lsm303d_mag.MagTests.test_saturation_has_no_valid_flag_and_recovers_on_new_data) ... ok
+test_signed_little_endian_scale_and_raw_body_axes (test_lsm303d_mag.MagTests.test_signed_little_endian_scale_and_raw_body_axes) ... ok
+test_wrong_identity_never_writes_configuration (test_lsm303d_mag.MagTests.test_wrong_identity_never_writes_configuration) ... ok
+test_generated_header_crc_matches_its_float32_constants (test_mag_calibration.CalibrationTests.test_generated_header_crc_matches_its_float32_constants) ... ok
+test_recovers_known_ellipsoid_and_holdout (test_mag_calibration.CalibrationTests.test_recovers_known_ellipsoid_and_holdout) ... ok
+test_rejects_inconsistent_magnetic_environment (test_mag_calibration.CalibrationTests.test_rejects_inconsistent_magnetic_environment) ... ok
+test_rejects_stationary_planar_and_incomplete_coverage (test_mag_calibration.CalibrationTests.test_rejects_stationary_planar_and_incomplete_coverage) ... ok
+test_clock_wraparound (test_mpu6000.Mpu6000DriverTests.test_clock_wraparound) ... ok
+test_cs_and_busy_drop (test_mpu6000.Mpu6000DriverTests.test_cs_and_busy_drop) ... ok
+test_dma_start_failure (test_mpu6000.Mpu6000DriverTests.test_dma_start_failure) ... ok
+test_dma_timeout (test_mpu6000.Mpu6000DriverTests.test_dma_timeout) ... ok
+test_drdy_timeout (test_mpu6000.Mpu6000DriverTests.test_drdy_timeout) ... ok
+test_explicit_recovery (test_mpu6000.Mpu6000DriverTests.test_explicit_recovery) ... ok
+test_id_rejection (test_mpu6000.Mpu6000DriverTests.test_id_rejection) ... ok
+test_initialization (test_mpu6000.Mpu6000DriverTests.test_initialization) ... ok
+test_invalid_data_status (test_mpu6000.Mpu6000DriverTests.test_invalid_data_status) ... ok
+test_late_dma_completion (test_mpu6000.Mpu6000DriverTests.test_late_dma_completion) ... ok
+test_queue_overflow (test_mpu6000.Mpu6000DriverTests.test_queue_overflow) ... ok
+test_raw_conversion (test_mpu6000.Mpu6000DriverTests.test_raw_conversion) ... ok
+test_readback (test_mpu6000.Mpu6000DriverTests.test_readback) ... ok
+test_register_io (test_mpu6000.Mpu6000DriverTests.test_register_io) ... ok
+test_reset_settling (test_mpu6000.Mpu6000DriverTests.test_reset_settling) ... ok
+test_spi_fault_late_callbacks (test_mpu6000.Mpu6000DriverTests.test_spi_fault_late_callbacks) ... ok
+test_stale_caller_timestamp (test_mpu6000.Mpu6000DriverTests.test_stale_caller_timestamp) ... ok
+test_boot_probe_irq_deferral_fault_and_recovery (test_mpu6000_port.PortTests.test_boot_probe_irq_deferral_fault_and_recovery) ... ok
+test_adc_bus_and_imu_faults (test_ms56xx_baro.BaroTests.test_adc_bus_and_imu_faults) ... ok
+test_datasheet_examples (test_ms56xx_baro.BaroTests.test_datasheet_examples) ... ok
+test_known_crc_vector_and_invalid_arguments (test_ms56xx_baro.BaroTests.test_known_crc_vector_and_invalid_arguments) ... ok
+test_latest_stale_without_service_and_rollover (test_ms56xx_baro.BaroTests.test_latest_stale_without_service_and_rollover) ... ok
+test_low_temperature_both_models (test_ms56xx_baro.BaroTests.test_low_temperature_both_models) ... ok
+test_ms5607_acquisition_and_reference (test_ms56xx_baro.BaroTests.test_ms5607_acquisition_and_reference) ... ok
+test_pending_single_consume_and_fault_latched (test_ms56xx_baro.BaroTests.test_pending_single_consume_and_fault_latched) ... ok
+test_prom_crc_and_blank (test_ms56xx_baro.BaroTests.test_prom_crc_and_blank) ... ok
+test_reference_height_sign_filter_and_zero (test_ms56xx_baro.BaroTests.test_reference_height_sign_filter_and_zero) ... ok
+test_reset_and_conversion_deadline_uses_transaction_end (test_ms56xx_baro.BaroTests.test_reset_and_conversion_deadline_uses_transaction_end) ... ok
+test_spi_busy_retries_and_times_out (test_ms56xx_baro.BaroTests.test_spi_busy_retries_and_times_out) ... ok
+test_unknown_model_collects_both_without_height (test_ms56xx_baro.BaroTests.test_unknown_model_collects_both_without_height) ... ok
+test_unstable_reference_restarts_and_range_failure (test_ms56xx_baro.BaroTests.test_unstable_reference_restarts_and_range_failure) ... ok
+
+----------------------------------------------------------------------
+Ran 79 tests in 4.477s
+
+OK

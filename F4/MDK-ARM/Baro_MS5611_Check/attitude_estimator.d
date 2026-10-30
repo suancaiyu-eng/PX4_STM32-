@@ -1,0 +1,10 @@
+baro_ms5611_check\attitude_estimator.o: ../Core/Src/attitude_estimator.c
+baro_ms5611_check\attitude_estimator.o: ../Core/Inc/attitude_estimator.h
+baro_ms5611_check\attitude_estimator.o: ../Core/Inc/mpu6000.h
+baro_ms5611_check\attitude_estimator.o: D:\Users\21144\AppData\Local\Keil_v5\ARM\Arm_Compiler_5.06u7\Bin\..\include\stdbool.h
+baro_ms5611_check\attitude_estimator.o: D:\Users\21144\AppData\Local\Keil_v5\ARM\Arm_Compiler_5.06u7\Bin\..\include\stdint.h
+baro_ms5611_check\attitude_estimator.o: ../Core/Inc/lsm303d_mag.h
+baro_ms5611_check\attitude_estimator.o: D:\Users\21144\AppData\Local\Keil_v5\ARM\Arm_Compiler_5.06u7\Bin\..\include\float.h
+baro_ms5611_check\attitude_estimator.o: D:\Users\21144\AppData\Local\Keil_v5\ARM\Arm_Compiler_5.06u7\Bin\..\include\math.h
+baro_ms5611_check\attitude_estimator.o: D:\Users\21144\AppData\Local\Keil_v5\ARM\Arm_Compiler_5.06u7\Bin\..\include\stddef.h
+baro_ms5611_check\attitude_estimator.o: D:\Users\21144\AppData\Local\Keil_v5\ARM\Arm_Compiler_5.06u7\Bin\..\include\string.h

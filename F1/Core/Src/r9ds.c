@@ -195,6 +195,8 @@ void R9DS_Process(void)
         if (sbus_receiver_accept(&receiver, frame.bytes, SBUS_FRAME_SIZE,
                                  frame.received_ms)) {
             counters.frames_received++;
+            if (receiver.latest.frame_lost) { counters.frame_lost_reports++; }
+            if (receiver.latest.failsafe) { counters.failsafe_reports++; }
         } else {
             /* This counter also has an ISR writer. Protect the increment. */
             saved_primask = __get_PRIMASK();

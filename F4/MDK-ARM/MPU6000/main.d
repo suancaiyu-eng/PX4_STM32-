@@ -44,3 +44,10 @@ mpu6000\main.o: ../Core/Inc/imu_telemetry.h
 mpu6000\main.o: ../Core/Inc/mpu6000_port.h
 mpu6000\main.o: ../Core/Inc/attitude_estimator.h
 mpu6000\main.o: ../Core/Inc/lsm303d_mag.h
+mpu6000\main.o: ../Core/Inc/ms56xx_baro.h
+mpu6000\main.o: ../../../firmware/common/board_link_app.h
+mpu6000\main.o: ../../../firmware/common/board_link.h
+mpu6000\main.o: ../../../firmware/common/board_link_protocol.h
+mpu6000\main.o: ../Core/Inc/board_link_telem.h
+mpu6000\main.o: ../Core/Inc/actuator_client.h
+mpu6000\main.o: ../../../firmware/common/actuator_protocol.h

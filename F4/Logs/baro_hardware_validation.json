@@ -1,0 +1,163 @@
+{
+  "location": "Guilin, Guangxi, China; indoor (user supplied)",
+  "selected_compensation_model": 5611,
+  "identification": "Measured pressure plausibility, not silicon model ID",
+  "static": {
+    "console_rows": 1198,
+    "capture_seconds": 60.0174272,
+    "height_valid_rows": 1126,
+    "console_hz": 19.960868965739337,
+    "pressure_pa_range": [
+      99839,
+      99853
+    ],
+    "temperature_c_range": [
+      31.81,
+      31.94
+    ],
+    "filtered_height_m_range": [
+      -0.633,
+      0.126
+    ],
+    "filtered_height_std_m": 0.17504843780190119,
+    "first_5s_mean_m": -0.05393,
+    "last_5s_mean_m": -0.47347,
+    "first_last_5s_change_m": -0.41954,
+    "peak_above_initial_mean_m": 0.17993,
+    "max_age_us": 21337,
+    "first_valid_sample_sequence": 151,
+    "max_reference_samples": 100
+  },
+  "static_counters": {
+    "window_seconds": 49.610094,
+    "baro_hz": 48.21599410797327,
+    "imu_hz": 1001.4292655845402,
+    "mag_hz": 96.63356009766883,
+    "counter_deltas": {
+      "baro": {
+        "bus_errors": 0
+      },
+      "imu": {
+        "busy_drops": 0,
+        "queue_drops": 0,
+        "invalid_samples": 0,
+        "spi_errors": 0,
+        "timeouts": 0
+      },
+      "spi": {
+        "errors": 0,
+        "deferred_drdy": 0,
+        "lost_drdy": 0
+      },
+      "mag": {
+        "bus_errors": 0,
+        "invalid_samples": 0,
+        "overruns": 0
+      }
+    },
+    "max_baro_interval_us": 21572,
+    "max_peer_spi_us": 122,
+    "reference_pressure_pa": 99842.6171875,
+    "prom": [
+      0,
+      44490,
+      48500,
+      26881,
+      25419,
+      34231,
+      27531,
+      0
+    ],
+    "crc4": 0,
+    "crc_expected": 0,
+    "snapshot_note": "Live SWD reads are not atomic; rates are approximate long-window counter rates."
+  },
+  "movement": {
+    "console_rows": 1200,
+    "capture_seconds": 60.0083973,
+    "height_valid_rows": 1200,
+    "console_hz": 19.997201291693223,
+    "pressure_pa_range": [
+      99767,
+      99857
+    ],
+    "temperature_c_range": [
+      31.9,
+      32.06
+    ],
+    "filtered_height_m_range": [
+      -0.01,
+      5.691
+    ],
+    "filtered_height_std_m": 1.041562120245622,
+    "first_5s_mean_m": 1.25929,
+    "last_5s_mean_m": 0.16432,
+    "first_last_5s_change_m": -1.09497,
+    "peak_above_initial_mean_m": 4.43171,
+    "max_age_us": 21096,
+    "first_valid_sample_sequence": 1248,
+    "max_reference_samples": 100,
+    "user_reported_approximate_height_m": 0.5,
+    "user_reported_method": "Casual lift, holding edges; no obvious airflow",
+    "controlled_test": false,
+    "direction_verified": false,
+    "accuracy_verified": false,
+    "interpretation": "Exploratory trace only: no synchronized action markers or fixed height fixture; do not infer direction, scale or cause of transient."
+  },
+  "movement_counters": {
+    "window_seconds": 33.058063,
+    "baro_hz": 48.218191126322196,
+    "imu_hz": 1000.9660880614815,
+    "mag_hz": 96.85987953982665,
+    "counter_deltas": {
+      "baro": {
+        "bus_errors": 0
+      },
+      "imu": {
+        "busy_drops": 0,
+        "queue_drops": 0,
+        "invalid_samples": 0,
+        "spi_errors": 0,
+        "timeouts": 0
+      },
+      "spi": {
+        "errors": 0,
+        "deferred_drdy": 0,
+        "lost_drdy": 0
+      },
+      "mag": {
+        "bus_errors": 0,
+        "invalid_samples": 0,
+        "overruns": 0
+      }
+    },
+    "max_baro_interval_us": 21587,
+    "max_peer_spi_us": 122,
+    "reference_pressure_pa": 99854.40625,
+    "prom": [
+      0,
+      44490,
+      48500,
+      26881,
+      25419,
+      34231,
+      27531,
+      0
+    ],
+    "crc4": 0,
+    "crc_expected": 0,
+    "snapshot_note": "Live SWD reads are not atomic; rates are approximate long-window counter rates."
+  },
+  "timeout_injection": {
+    "kind": "Software phase_us timestamp set to zero via SWD; not a physical bus fault",
+    "latched_error": 6,
+    "valid_flags_cleared": true,
+    "imu_kept_running": true,
+    "reset_restored_valid_height": true
+  },
+  "limits": [
+    "No flight altitude-hold controller or vertical inertial fusion is part of this driver task.",
+    "The informal motion capture cannot validate direction or amplitude; no further motion measurement is scheduled.",
+    "Raw barometric height contains drift and pressure/thermal disturbances; no absolute accuracy claimed."
+  ]
+}

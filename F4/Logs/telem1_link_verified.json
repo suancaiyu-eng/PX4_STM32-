@@ -1,0 +1,100 @@
+{
+  "verification": "Target-side DMA and board link; not a PC serial capture",
+  "symbols": {
+    "g_telemetry_status": [
+      536874096,
+      64
+    ],
+    "g_board_link_telem_status": [
+      536875000,
+      12
+    ],
+    "g_board_link_status": [
+      536875012,
+      68
+    ],
+    "g_board_link_test": [
+      536875980,
+      120
+    ],
+    "text_queue": [
+      536872716,
+      1280
+    ]
+  },
+  "snapshots": [
+    {
+      "index": 0,
+      "uptime_ms": 289,
+      "text_received": 1,
+      "text_queued": 1,
+      "text_started": 1,
+      "text_dropped": 0,
+      "dma_started": 2,
+      "dma_completed": 2,
+      "imu_frames_dropped": 16,
+      "uart_errors": 0,
+      "tx_timeouts": 0,
+      "start_errors": 0,
+      "faulted": 0,
+      "link_crc_errors": 0,
+      "link_uart_errors": 0,
+      "matched_replies": 1,
+      "reply_timeouts": 0,
+      "peer_online": 1,
+      "formatted_lines": []
+    },
+    {
+      "index": 1,
+      "uptime_ms": 10550,
+      "text_received": 80,
+      "text_queued": 80,
+      "text_started": 80,
+      "text_dropped": 0,
+      "dma_started": 1073,
+      "dma_completed": 1073,
+      "imu_frames_dropped": 50,
+      "uart_errors": 0,
+      "tx_timeouts": 0,
+      "start_errors": 0,
+      "faulted": 0,
+      "link_crc_errors": 0,
+      "link_uart_errors": 0,
+      "matched_replies": 42,
+      "reply_timeouts": 0,
+      "peer_online": 1,
+      "formatted_lines": [
+        "#LINK_RX src=F1 type=RSP cmd=0x0001 seq=41 len=23 count=41 sender_ms=10250 text=\"F4->F1 link tes\" hex=290000000A28000046342D3E4631206C696E6B20746573",
+        "#LINK_RX src=F1 type=REQ cmd=0x0001 seq=3126 len=23 count=3126 sender_ms=839000 text=\"F1->F4 link tes\" hex=360C000058CD0C0046312D3E4634206C696E6B20746573",
+        "#LINK_RX src=F1 type=RSP cmd=0x0001 seq=42 len=23 count=42 sender_ms=10500 text=\"F4->F1 link tes\" hex=2A0000000429000046342D3E4631206C696E6B20746573",
+        "#LINK_RX src=F1 type=REQ cmd=0x0001 seq=3127 len=23 count=3127 sender_ms=839250 text=\"F1->F4 link tes\" hex=370C000052CE0C0046312D3E4634206C696E6B20746573"
+      ]
+    },
+    {
+      "index": 2,
+      "uptime_ms": 20795,
+      "text_received": 162,
+      "text_queued": 161,
+      "text_started": 161,
+      "text_dropped": 0,
+      "dma_started": 2178,
+      "dma_completed": 2178,
+      "imu_frames_dropped": 50,
+      "uart_errors": 0,
+      "tx_timeouts": 0,
+      "start_errors": 0,
+      "faulted": 0,
+      "link_crc_errors": 0,
+      "link_uart_errors": 0,
+      "matched_replies": 83,
+      "reply_timeouts": 0,
+      "peer_online": 1,
+      "formatted_lines": [
+        "#LINK_RX src=F1 type=RSP cmd=0x0001 seq=83 len=23 count=83 sender_ms=20750 text=\"F4->F1 link tes\" hex=530000000E51000046342D3E4631206C696E6B20746573",
+        "#LINK_RX src=F1 type=REQ cmd=0x0001 seq=3166 len=23 count=3166 sender_ms=849000 text=\"F1->F4 link tes\" hex=5E0C000068F40C0046312D3E4634206C696E6B20746573",
+        "#LINK_RX src=F1 type=RSP cmd=0x0001 seq=82 len=23 count=82 sender_ms=20500 text=\"F4->F1 link tes\" hex=520000001450000046342D3E4631206C696E6B20746573",
+        "#LINK_RX src=F1 type=REQ cmd=0x0001 seq=3167 len=23 count=3167 sender_ms=849250 text=\"F1->F4 link tes\" hex=5F0C000062F50C0046312D3E4634206C696E6B20746573"
+      ]
+    }
+  ]
+}
